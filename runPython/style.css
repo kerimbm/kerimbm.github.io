@@ -1,0 +1,70 @@
+.container{
+    border: 1px solid #6688ff;
+    border-left: 5px solid #6688ff;
+    overflow: hidden;
+    width: calc(70% - 16px);
+    height: auto;
+    display: flex;
+    padding: 5px 5px 0 5px;
+}
+
+.marg{
+    padding: 6px 10px 0 0;
+    font-family: monospace, 'Courier New', Courier;
+    width: 100px;
+    color: #4444ff;
+    text-align: right;
+    font-size: 14px;
+}
+
+.content{
+    flex: auto;
+    padding-bottom: 0;
+    width: calc(70% - 2px);
+}
+
+.code{
+    background-color: #f7f7f7;
+    border: 1px solid #d0d0e0;
+    width: calc(100% - 2px);
+    padding: 5px 0;
+}
+
+.out{
+    width: 100%;
+}
+
+.editor{
+    margin: 0;
+    width: 100%;
+}
+
+.output{
+    /*background-color: #f5f5f5;
+    border: 1px solid #ccc;*/
+    /*padding: 5px;*/
+    margin: 5px;
+    font-size: 14px;
+}
+
+.myinput{
+    width: 400px;
+    padding: 0;
+    font-size: 14px;
+    border: none;
+    background-color: #f0f0f0;
+    font-family: monospace, 'Courier New', Courier;
+}
+
+.myerr{
+    color:red;
+    display: block;
+    margin-top: 10px;
+}
+
+.mycanvas{
+    background-color:#f2f2f2;
+    width: 800px;
+    display: block;
+    margin: 0 auto 5px auto;
+}
