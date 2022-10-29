@@ -5,7 +5,7 @@
     <title>Document</title>
     <script src="sha512.min.js"></script>
     <script>
-    !sessionStorage.getItem("connexion")||k!=sessionStorage.getItem("connexion")?a=true:window.location.href="index.html";
+    sessionStorage.getItem("connexion")!=k?a=true:window.location.href="index.html";
     </script>
 </head>
 <body>
