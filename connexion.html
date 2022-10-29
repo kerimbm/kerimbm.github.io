@@ -2,21 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Connexion</title>
+    <style>
+        body{
+            background-color: #eee;
+        }
+        #connexion{
+            width: 30%;
+            margin: auto;
+            top: 200px;
+            text-align: center;
+            position: relative;
+        }
+        p{
+            color : #666;
+            font-size : 11px;
+            font-family : "courier new";
+        }
+    </style>
     <script src="sha512.min.js"></script>
     <script>
     sessionStorage.getItem("connexion")!=k?a=true:window.location.href="index.html";
     </script>
 </head>
 <body>
-    <h1>connexion</h1>
-    <input type="text" id="pw">
-    <input type="button" value="connexion" onclick="storage_mdp();">
+    <div id="connexion">
+        <h1>Connexion</h1>
+        <input type="password" id="pw" style="box-shadow:0 0 5px #bbb;"><br><br>
+        <input type="button" value="Connexion" onclick="storage_mdp();">
+        <p>Créer par kerimbm (Enseignant informatique)</p>
+    </div>
     <script>
         document.getElementById("pw").addEventListener('keypress', storage_mdp_key);
         function storage_mdp_key(e){
-            if(e.code=="Enter")
+            if(e.code=="Enter" || e.code == "NumpadEnter"){
                 storage_mdp();
+            }
         }
         function storage_mdp(){
             var mdp=sha512(document.getElementById("pw").value);
