@@ -24,7 +24,9 @@
         var dossier = params.get('d');
         var fichier = params.get('f');
         var section = params.get('s');
-        var href = fichier + ".html";
+        var href = "index.html";
+        if(fichier)
+            href = fichier + ".html";
         if(dossier)
             href = dossier + "/" + href;
         if(section)
