@@ -1,11 +1,11 @@
 head = `{
-    "title": "Les types entier et réel",
+    "title": "Les types numérique (Entier et réel) ok",
     "subTitle": "entier-reel",
-    "author": "me",
-    "date": "10/09/2020",
-    "description": "Section : Les types entier et réel",
+    "author": "kerimbm",
+    "date": "30/10/2022",
+    "description": "Section : Les types numérique (Entier et réel)",
     "norepeat": false,
-    "quizid": 1599750974470
+    "quizid": 1667130585027
 }`;
 
 data = `[
@@ -19,39 +19,48 @@ data = `[
         "options": [[1, "5"]]
     },
     {
-        "type": "one",
-        "points": 4,
-        "temps": 20,
-        "question": "Les nombres à virgule flottante sont codés sur :",
-        "code": "",
-        "lang": "python",
-        "options": ["8 octets", "7 octets", "9 octets"]
-    },
-    {
-        "type": "entry",
-        "points": 4,
-        "temps": 20,
-        "question": "Quel est le nombre d'octets réservés pour le type entier ?",
-        "code": "",
-        "lang": "python",
-        "options": [[1, "4"]]
-    },
-    {
-        "type": "entry",
-        "points": 4,
-        "temps": 60,
-        "question": "Quel est la valeur affichée par ce programme ?",
-        "code": "a = 7\\ni = 10\\nwhile i &#60; 20 and i % a !=0 :\\n    i += 1\\nprint(i)",
-        "lang": "python",
-        "options": [[1, "14"]]
-    },
-    {
         "type": "multi",
         "points": 4,
         "temps": 30,
-        "question": "Quels sont les variables de type \\"float\\" ?",
+        "question": "Quels sont les variables de type réel ?",
         "code": "",
         "lang": "python",
-        "options": [["a = 9", false], ["b = 10 // 3", false], ["c = 9.5 ** 2", true], ["d = 10 / 2", true]]
+        "options": [["a ← 9", false], ["b ← 10 // 3", false], ["c ← 9.5 ** 2", true], ["d ← 10 / 2", true]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 40,
+        "question": "Quelle valeur sera affichée par le programme ci-dessous ?",
+        "code": "a = 22 \\nb = 12 \\nprint((a // b) + (a % b)) ",
+        "lang": "python",
+        "options": ["11", "11,83", "34", "2"]
+    },
+    {
+        "type": "entry",
+        "points": 2,
+        "temps": 20,
+        "question": "Quelle valeur sera affichée par le programme ci-dessous ?",
+        "code": "a = 10\\nb = a // 3\\na = a * b +a % b\\nprint(a)",
+        "lang": "python",
+        "options": [[1, "31"]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 40,
+        "question": "Parmi les conditions suivantes, une seule est vraie, laquelle ?",
+        "code": "",
+        "lang": "python",
+        "options": ["269 &#62;= 149 or 39 &#62;= 45", "269 &#62;= 149 and 39 &#62;= 45", "11 &#60; 63 and 39 &#62;= 45", "39 &#62;= 45 or 26 &#62; 69"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Parmi les conditions suivantes, une seule est fausse, laquelle ?",
+        "code": "a = 4\\nb = 11",
+        "lang": "python",
+        "options": ["a + b == a * b", "a != b", "a + b != a * b", "a * b &#62; 35"]
     }
 ]`;
