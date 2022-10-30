@@ -23,10 +23,14 @@
         let params = (new URL(document.location)).searchParams;
         var dossier = params.get('d');
         var fichier = params.get('f');
-        if(dossier==null)
-            sessionStorage.getItem("connexion")!=k?a=true:window.location.href=fichier+".html";
-        else
-            sessionStorage.getItem("connexion")!=k?a=true:window.location.href=dossier +"/"+ fichier+".html";
+        var section = params.get('s');
+        var href = fichier + ".html";
+
+        if(dossier)
+            href = dossier + "/" + href;
+        if(section)
+            href = href + "?s="+section;
+            sessionStorage.getItem("connexion")!=k?a=true:window.location.href=href;
     </script>
 </head>
 <body>
@@ -46,12 +50,7 @@
         function storage_mdp(){
             var mdp=sha512(document.getElementById("pw").value);
             sessionStorage.setItem("connexion",mdp);
-            console.log("dossier="+dossier);
-            console.log("fichier="+fichier);
-            if(dossier==null)
-                k!=mdp?a=true:window.location.href=fichier+".html";
-            else
-                k!=mdp?a=true:window.location.href=dossier+"/"+fichier+".html";
+            k!=mdp?a=true:window.location.href=href;
         }
     </script>
 </body>
