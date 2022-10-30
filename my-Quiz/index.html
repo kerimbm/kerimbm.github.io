@@ -21,9 +21,7 @@
         <script>
             let params = (new URL(document.location)).searchParams;
             let section = params.get('section');
-            console.log(section);
             document.getElementById("script_json").src = "json/" + section + ".json";
-            console.log(document.getElementById("script_json").src);
         </script>
         
         <script>

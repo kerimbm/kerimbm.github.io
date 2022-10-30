@@ -8,11 +8,9 @@
             background-color: #eee;
         }
         #connexion{
-            width: 30%;
-            margin: auto;
-            top: 200px;
+            margin-top: 50vh;
+            transform: translateY(-50%);
             text-align: center;
-            position: relative;
         }
         p{
             color : #666;
@@ -22,13 +20,19 @@
     </style>
     <script src="sha512.min.js"></script>
     <script>
-    sessionStorage.getItem("connexion")!=k?a=true:window.location.href="index.html";
+        let params = (new URL(document.location)).searchParams;
+        var dossier = params.get('d');
+        var fichier = params.get('f');
+        if(dossier==null)
+            sessionStorage.getItem("connexion")!=k?a=true:window.location.href=fichier+".html";
+        else
+            sessionStorage.getItem("connexion")!=k?a=true:window.location.href=dossier +"/"+ fichier+".html";
     </script>
 </head>
 <body>
     <div id="connexion">
         <h1>Connexion</h1>
-        <input type="password" id="pw" style="box-shadow:0 0 5px #bbb;"><br><br>
+        <input type="password" id="pw" style="box-shadow:0 0 5px #aaa;"><br><br>
         <input type="button" value="Connexion" onclick="storage_mdp();">
         <p>Créer par kerimbm (Enseignant informatique)</p>
     </div>
@@ -42,7 +46,12 @@
         function storage_mdp(){
             var mdp=sha512(document.getElementById("pw").value);
             sessionStorage.setItem("connexion",mdp);
-            k!=mdp?a=true:window.location.href="index.html";
+            console.log("dossier="+dossier);
+            console.log("fichier="+fichier);
+            if(dossier==null)
+                k!=mdp?a=true:window.location.href=fichier+".html";
+            else
+                k!=mdp?a=true:window.location.href=dossier+"/"+fichier+".html";
         }
     </script>
 </body>
