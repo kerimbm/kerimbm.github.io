@@ -1,18 +1,18 @@
 head = `{
-    "title": "introduction",
-    "subTitle": "",
-    "author": "Prof Info",
-    "date": "05/09/2020",
+    "title": "Introduction",
+    "subTitle": "introduction",
+    "author": "kerimbm",
+    "date": "30/10/2022",
     "description": "Section : Introduction",
     "norepeat": false,
-    "quizid": 1663794119937
+    "quizid": 1667124204195
 }`;
 
 data = `[
     {
         "type": "multi",
-        "points": 2,
-        "temps": 30,
+        "points": 1,
+        "temps": 40,
         "question": "Un langage de programmation sert à traduire :",
         "code": "",
         "lang": "python",
@@ -20,7 +20,7 @@ data = `[
     },
     {
         "type": "sort",
-        "points": 3,
+        "points": 2,
         "temps": 60,
         "question": "Ordonner les étapes d'exécution d'un programme écrit en langage compilé :",
         "code": "",
@@ -30,7 +30,7 @@ data = `[
     {
         "type": "sort",
         "points": 2,
-        "temps": 30,
+        "temps": 40,
         "question": "Ordonner les étapes d'exécution d'un programme écrit en langage interprété :",
         "code": "",
         "lang": "python",
@@ -38,16 +38,16 @@ data = `[
     },
     {
         "type": "drag",
-        "points": 3,
-        "temps": 50,
-        "question": "Lier chaque terme par sa définition :",
+        "points": 2,
+        "temps": 60,
+        "question": "Relier chaque mot à sa définition :",
         "code": "",
         "lang": "python",
         "options": [["Python", "Est un langage de programmation interprété"], ["Le langage C", "Est un langage de programmation compilé"], ["Un logiciel", "Est une suite d'instructions écrites en langage machine"], ["Le processeur d'un ordinateur", "Exécute des instructions écrites en langage machine"]]
     },
     {
         "type": "multi",
-        "points": 3,
+        "points": 2,
         "temps": 50,
         "question": "Un programme écrit en langage interprété :",
         "code": "",
@@ -56,7 +56,7 @@ data = `[
     },
     {
         "type": "multi",
-        "points": 3,
+        "points": 2,
         "temps": 50,
         "question": "Un programme écrit en langage compilé :",
         "code": "",
@@ -65,7 +65,7 @@ data = `[
     },
     {
         "type": "multi",
-        "points": 2,
+        "points": 1,
         "temps": 30,
         "question": "Python peut être installé sur :",
         "code": "",
@@ -74,11 +74,47 @@ data = `[
     },
     {
         "type": "one",
-        "points": 2,
+        "points": 1,
         "temps": 20,
         "question": "Quel est le type du langage Python ?",
         "code": "",
         "lang": "python",
         "options": ["Un langage interprété", "Un langage compilé", "Un langage de bas-niveau"]
+    },
+    {
+        "type": "sort",
+        "points": 2,
+        "temps": 30,
+        "question": "Ordonner les étapes de résolution des problèmes :",
+        "code": "",
+        "lang": "python",
+        "options": ["Analyse", "Algorithme", "Ecriture du programme et test", "Correction des erreurs et amélioration"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Un algorithme est une suite d'instructions écrites en :",
+        "code": "",
+        "lang": "python",
+        "options": ["Langage formel", "Langage machine", "Langage de programmation", "Langage humaine"]
+    },
+    {
+        "type": "multi",
+        "points": 1,
+        "temps": 20,
+        "question": "Un Tableau de Déclaration des Objets (T.D.O) sert à :",
+        "code": "",
+        "lang": "python",
+        "options": [["Définir les types des objets utilisés dans un programme", true], ["Vérifiers les objets utilisés dans un programme", false], ["Définir les objets utilisés dans un programme", true]]
+    },
+    {
+        "type": "drag",
+        "points": 2,
+        "temps": 50,
+        "question": "Associer chaque mot à sa définition :",
+        "code": "",
+        "lang": "python",
+        "options": [["Blockly", "Une interface de programmation en blocs"], ["Un algorithme", "Une suite d'instructions en langage formel"], ["Un programme compilé", "Une suite d'instructions en langage machine"], ["Un programme interprété", "Une suite d'instructions en langage source"]]
     }
 ]`;
