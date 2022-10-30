@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HTML Editor</title>
+  <title>ACE Autocompletion</title>
   <style type="text/css" media="screen">
     #maindiv, #maindiv::after, #maindiv::before {
         -webkit-user-select: none;
@@ -10,16 +10,17 @@
         -webkit-app-region: no-drag;
         cursor: default;
     }
+
   </style>
   <script src="../sha512.min.js"></script>
   <script>
-      sessionStorage.getItem("connexion")==k?a=true:window.location.href="../connexion.html?d=html editor&f=index";
-  </script>  
+      sessionStorage.getItem("connexion")==k?a=true:window.location.href="../connexion.html?d=html-editor&f=b";
+  </script>
 </head>
-<body>
+<body style="margin: 0px;">
 
 
-<div id="maindiv" style="border:1px solid #bbb;position: relative; width: 1010px; height: 600px;margin: auto;">
+<div id="maindiv" style="position: relative; width: 1010px; height: 600px;top: 0px;left: 0px;">
     <div id="section1" style="position: relative; width: 100%; height: 50%;">
         <div id="htmldiv" style="position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
             <div style="position: relative; text-align: center; background-color: #444449;color:#999;">HTML</div>
@@ -45,7 +46,7 @@
         </div>
         <div id="splitter2" style="top:50px;width: 10px;height: 40px;background-color: #666669;border-radius: 5px;float: left;position: relative;left: -5px;z-index: 10;cursor: col-resize;"></div>
         <div id="jsdiv" style="left:-10px;position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
-            <div id="divider2" style="text-align: center; background-color: #444449;color:#999; width: calc(100% + 10px); cursor: row-resize;">JavaScript</div>
+            <div id="divider2" style="text-align: center; background-color: #444449;color:#999; width: calc(100% + 10px); cursor: row-resize;">Javascript</div>
             <div id="edit3" style="position: relative; width: calc(100% + 10px); height: 100%;">
                 <pre id="editor3" style="position: relative; width: 100%; height: 100%;margin: 0px;padding: 0px;"></pre>
             </div>
@@ -77,13 +78,13 @@
     var masq = document.getElementById('masq');
     
     // paramètres
-    var totalwidth = 1010;           // htmldiv.width + splitter.width + cssdiv.width (500 + 10 + 500)
-    var totalheight = 650;           // section1.height + section2.height
+    var totalwidth = 800;           // htmldiv.width + splitter.width + cssdiv.width (500 + 10 + 500)
+    var totalheight = 700;           // section1.height + section2.height
     var minwidth = 150;              // htmldiv ou cssdiv ou output ou jsdiv
     var minheight = 80;              // section1 ou section2 ou htmldiv  ou cssdiv ou output ou jsdiv
     var maintop = 0;                 // position x
     var mainleft = 0;                // position y
-    var defaulthtmlwidth = 70;       // largeur par défaut de htmldiv (%)
+    var defaulthtmlwidth = 60;       // largeur par défaut de htmldiv (%)
     var defaultoutputwidth = 65;     // largeur par défaut de output (%)
     var showcss = true;              // afficher css ?
     var showjs = true;               // afficher javascript ?
@@ -204,7 +205,7 @@
 
                 if(dragging1){
                     htmldiv.style.width = xmouse-maindiv.offsetLeft+(document.body.scrollLeft || document.documentElement.scrollLeft)+'px';
-                    cssdiv.style.width = maindiv.offsetWidth -2- htmldiv.offsetWidth - splitter1.offsetWidth +'px';
+                    cssdiv.style.width = maindiv.offsetWidth - htmldiv.offsetWidth - splitter1.offsetWidth +'px';
                 }
                 else if(dragging2){
                     output.style.width = xmouse-maindiv.offsetLeft+(document.body.scrollLeft || document.documentElement.scrollLeft)+'px';
@@ -212,7 +213,7 @@
                 }
                 else if(dragging3){
                     section1.style.height = ymouse-maindiv.offsetTop-11+(document.body.scrollTop || document.documentElement.scrollTop)+'px';
-                    section2.style.height = maindiv.offsetHeight -2- section1.offsetHeight +'px';
+                    section2.style.height = maindiv.offsetHeight - section1.offsetHeight +'px';
                     htmldiv.style.height = section1.offsetHeight + 'px';
                     cssdiv.style.height = section1.offsetHeight + 'px';
                     output.style.height = section2.offsetHeight + 'px';
