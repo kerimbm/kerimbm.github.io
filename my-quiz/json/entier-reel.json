@@ -5,7 +5,7 @@ head = `{
     "date": "30/10/2022",
     "description": "Section : Les types numérique (Entier et réel)",
     "norepeat": false,
-    "quizid": 1667245021705
+    "quizid": 1667255446205
 }`;
 
 data = `[
@@ -41,7 +41,7 @@ data = `[
         "points": 3,
         "temps": 40,
         "question": "Quelle valeur sera affichée par le programme ci-dessous ?",
-        "code": "a ← 10\\nb ← a // 3\\na ← a * b +a MOD b\\nEcrire(a)",
+        "code": "a ← 10\\nb ← a DIV 3\\na ← a * b +a MOD b\\nEcrire(a)",
         "lang": "python",
         "options": [[1, "31"]]
     },
