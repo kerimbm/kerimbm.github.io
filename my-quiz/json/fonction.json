@@ -5,7 +5,7 @@ head = `{
     "date": "31/10/2022",
     "description": "Section : Les fonctions",
     "norepeat": false,
-    "quizid": 1667250447845
+    "quizid": 1667257087529
 }`;
 
 data = `[
@@ -23,7 +23,7 @@ data = `[
         "points": 2,
         "temps": 30,
         "question": "Qu'affiche le programme suivant ?",
-        "code": "Fonction f(x : entier) : entier\\nDébut\\n    returner 3*x^2 - 6\\nFin\\nEcrire(f(3))",
+        "code": "Algorithme test\\nDébut\\n    Ecrire(f(3))\\nFin\\n\\nFonction f(x : entier) : entier\\nDébut\\n    returner 3*x^2 - 6\\nFin",
         "lang": "python",
         "options": ["21", "22", "12", "Erreur"]
     },
