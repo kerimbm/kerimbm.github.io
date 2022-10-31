@@ -5,7 +5,7 @@ head = `{
     "date": "30/10/2022",
     "description": "Section : Les structures simples",
     "norepeat": false,
-    "quizid": 1667244570470
+    "quizid": 1667252951099
 }`;
 
 data = `[
@@ -56,7 +56,7 @@ data = `[
     },
     {
         "type": "one",
-        "points": 2,
+        "points": 1,
         "temps": 20,
         "question": "Laquelle des instructions suivantes est utilisée pour l’affichage sur l'écran en algorithmique ?",
         "code": "",
@@ -116,5 +116,14 @@ data = `[
         "code": "a ← ...\\na ← a + 2\\na ← a ^ 2\\na ← (a + 1) / 2\\nEcrire(a)",
         "lang": "python",
         "options": [[1, "2"]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 30,
+        "question": "max ← 5 et var ← 2 sont deux exemples d’ _________?",
+        "code": "",
+        "lang": "python",
+        "options": ["Affectations de variables", "Opérations arithmétiques", "Entrées", "Sorties"]
     }
 ]`;

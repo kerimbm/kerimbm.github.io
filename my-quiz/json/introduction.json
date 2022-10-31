@@ -5,7 +5,7 @@ head = `{
     "date": "30/10/2022",
     "description": "Section : Introduction",
     "norepeat": false,
-    "quizid": 1667124204195
+    "quizid": 1667252128802
 }`;
 
 data = `[
@@ -83,7 +83,7 @@ data = `[
     },
     {
         "type": "sort",
-        "points": 2,
+        "points": 1,
         "temps": 30,
         "question": "Ordonner les étapes de résolution des problèmes :",
         "code": "",
@@ -116,5 +116,14 @@ data = `[
         "code": "",
         "lang": "python",
         "options": [["Blockly", "Une interface de programmation en blocs"], ["Un algorithme", "Une suite d'instructions en langage formel"], ["Un programme compilé", "Une suite d'instructions en langage machine"], ["Un programme interprété", "Une suite d'instructions en langage source"]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 30,
+        "question": "Quelles sont les trois parties d’un algorithme ?",
+        "code": "",
+        "lang": "python",
+        "options": ["Entrée, Traitement, Sortie", "Séquence, Sélection, Répétition", "Entrée, Décision, Sortie", "Entrée, Processus, Sortie"]
     }
 ]`;
