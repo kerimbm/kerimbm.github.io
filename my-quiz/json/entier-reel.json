@@ -1,66 +1,75 @@
 head = `{
-    "title": "Les types numérique (Entier et réel) ok",
+    "title": "Les types numérique (Entier et réel)",
     "subTitle": "entier-reel",
     "author": "kerimbm",
     "date": "30/10/2022",
     "description": "Section : Les types numérique (Entier et réel)",
     "norepeat": false,
-    "quizid": 1667130585027
+    "quizid": 1667245021705
 }`;
 
 data = `[
     {
         "type": "entry",
-        "points": 4,
+        "points": 3,
         "temps": 40,
-        "question": "Évaluer l'expression ci-dessous, sachant que : A = 11.",
-        "code": "(A % 4)**2//2+1",
+        "question": "Évaluer l'expression ci-dessous, sachant que : A ← 11.",
+        "code": "(A MOD 4)^2 DIV 2 + 1",
         "lang": "python",
         "options": [[1, "5"]]
     },
     {
         "type": "multi",
-        "points": 4,
+        "points": 2,
         "temps": 30,
-        "question": "Quels sont les variables de type réel ?",
+        "question": "Quelles sont les variables de type réel ?",
         "code": "",
         "lang": "python",
-        "options": [["a ← 9", false], ["b ← 10 // 3", false], ["c ← 9.5 ** 2", true], ["d ← 10 / 2", true]]
+        "options": [["a ← 9", false], ["b ← 10 DIV 3", false], ["c ← 9,5 ^ 2", true], ["d ← 10 / 2", true]]
     },
     {
         "type": "one",
-        "points": 2,
+        "points": 3,
         "temps": 40,
         "question": "Quelle valeur sera affichée par le programme ci-dessous ?",
-        "code": "a = 22 \\nb = 12 \\nprint((a // b) + (a % b)) ",
+        "code": "a ← 22 \\nb ← 12 \\nEcrire((a DIV b) + (a MOD b)) ",
         "lang": "python",
         "options": ["11", "11,83", "34", "2"]
     },
     {
         "type": "entry",
-        "points": 2,
-        "temps": 20,
+        "points": 3,
+        "temps": 40,
         "question": "Quelle valeur sera affichée par le programme ci-dessous ?",
-        "code": "a = 10\\nb = a // 3\\na = a * b +a % b\\nprint(a)",
+        "code": "a ← 10\\nb ← a // 3\\na ← a * b +a MOD b\\nEcrire(a)",
         "lang": "python",
         "options": [[1, "31"]]
     },
     {
         "type": "one",
-        "points": 2,
+        "points": 3,
         "temps": 40,
         "question": "Parmi les conditions suivantes, une seule est vraie, laquelle ?",
         "code": "",
         "lang": "python",
-        "options": ["269 &#62;= 149 or 39 &#62;= 45", "269 &#62;= 149 and 39 &#62;= 45", "11 &#60; 63 and 39 &#62;= 45", "39 &#62;= 45 or 26 &#62; 69"]
+        "options": ["269 ≥ 149 ou 39 ≥ 45", "269 ≥ 149 et 39 ≥ 45", "11 &#60; 63 et 39 ≥ 45", "39 ≥ 45 ou 26 &#62; 69"]
     },
     {
         "type": "one",
-        "points": 2,
-        "temps": 20,
+        "points": 3,
+        "temps": 40,
         "question": "Parmi les conditions suivantes, une seule est fausse, laquelle ?",
-        "code": "a = 4\\nb = 11",
+        "code": "a ← 4\\nb ← 11",
         "lang": "python",
-        "options": ["a + b == a * b", "a != b", "a + b != a * b", "a * b &#62; 35"]
+        "options": ["a + b = a * b", "a ≠ b", "a + b ≠ a * b", "a * b &#62; 35"]
+    },
+    {
+        "type": "drag",
+        "points": 3,
+        "temps": 60,
+        "question": "Évaluer les expressions suivantes :",
+        "code": "",
+        "lang": "python",
+        "options": [["RacineCarré(36) / 3", "2"], ["Abs(-12) MOD 9 &#62; 3", "Faux"], ["Aléa(2408, 4973) MOD 5 +1 ≤ 5", "Vrai"]]
     }
 ]`;

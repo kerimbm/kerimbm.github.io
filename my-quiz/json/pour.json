@@ -1,0 +1,84 @@
+head = `{
+    "title": "Structure itérative complète",
+    "subTitle": "pour",
+    "author": "kerimbm",
+    "date": "31/10/2022",
+    "description": "Section : Structure itérative complète",
+    "norepeat": false,
+    "quizid": 1667246513987
+}`;
+
+data = `[
+    {
+        "type": "entry",
+        "points": 3,
+        "temps": 40,
+        "question": "Quelle est la dernière valeur affichée par ce programme ?",
+        "code": "pour i de 2 à 9 pas=2 faire\\n    Ecrire(i)\\nfin pour",
+        "lang": "python",
+        "options": [[1, "8"]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Le nombre d'itérations dans une boucle \\"pour\\" est inconnue à l'avance :",
+        "code": "",
+        "lang": "python",
+        "options": ["Faux", "Vrai"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "L'incrémentation du compteur dans une structure itérative complète est automatique :",
+        "code": "",
+        "lang": "python",
+        "options": ["Vrai", "Faux"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 40,
+        "question": "Quel est le rôle de ce programme ?",
+        "code": "A ← 5\\nB ← 6\\nP ← 0\\npour i de 1 à B faire\\n   P ← P + A\\nfin pour\\nEcrire(P)",
+        "lang": "python",
+        "options": ["Affiche le produit de A par B", "Affiche la somme de A et B", "Affiche le résultat de \\"A à la puissance B\\""]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Que fait le code suivant ?",
+        "code": "pour i de 0 à 11 faire\\n    Ecrire(\\"BONJOUR\\")\\nfin pour",
+        "lang": "python",
+        "options": ["Affiche 12 fois BONJOUR", "Affiche 11 fois BONJOUR", "Affiche 13 fois BONJOUR", "Affiche 10 fois BONJOUR"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 30,
+        "question": "Quelle est la série de nombres affichées par ce programme ?",
+        "code": "pour i de 0 à 3 faire\\n    Ecrire(i)\\nfin pour",
+        "lang": "python",
+        "options": ["0, 1, 2 et 3", "0, 1, 2, 3 et 4", "0, 1 et 2", "1, 2 et 3"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 40,
+        "question": "Quelle est la sortie du programme suivant :",
+        "code": "pour n de 2 à -1 pas=-1 faire\\n    Ecrire(n)\\nfin pour",
+        "lang": "python",
+        "options": ["2, 1, 0, -1", "2, 1, 0, -1, -2", "2, 1, 0", "-2, -1, 0, 1, 2"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 40,
+        "question": "Le nombre d'itérations dans une structure itérative complète est :",
+        "code": "",
+        "lang": "python",
+        "options": ["Valeur Finale - Valeur Initiale + 1", "Valeur Finale - Valeur Initiale", "Valeur Initiale - Valeur Finale", "Valeur Finale - Valeur Initiale - 1"]
+    }
+]`;

@@ -1,57 +1,138 @@
 head = `{
     "title": "Les procédures",
     "subTitle": "procedure",
-    "author": "me",
-    "date": "13/08/2021",
+    "author": "kerimbm",
+    "date": "31/10/2022",
     "description": "Section : Les procédures",
     "norepeat": false,
-    "quizid": 1628890366299
+    "quizid": 1667250237949
 }`;
 
 data = `[
     {
-        "type": "one",
-        "points": 4,
-        "temps": 20,
-        "question": "Les variables locaux à une procédure sont accessibles à partir du programme principal :",
+        "type": "multi",
+        "points": 1,
+        "temps": 40,
+        "question": "L'appel d'une procédure peut être placée :",
         "code": "",
         "lang": "python",
-        "options": ["Faux", "Vrai"]
+        "options": [["A droite du signe d'affectation", false], ["Dans une autre fonction comme Ecrire()", false], ["Seule dans une nouvelle ligne", true], ["Dans une condition", false]]
     },
     {
         "type": "one",
-        "points": 4,
+        "points": 1,
         "temps": 20,
-        "question": "Les variables du programme principal sont accessibles à partir d'une procédure :",
+        "question": "Une procédure peut retourner un seul résultat de type composé",
         "code": "",
         "lang": "python",
         "options": ["Vrai", "Faux"]
     },
     {
         "type": "one",
-        "points": 4,
-        "temps": 30,
-        "question": "Pour modifier une variable du programme principale on doit utiliser l'instruction :",
+        "points": 1,
+        "temps": 20,
+        "question": "Une procédure peut retourner zéro, deux ou plusieurs résultats de type simple",
         "code": "",
         "lang": "python",
-        "options": ["global", "program", "root", "def"]
+        "options": ["Vrai", "Faux"]
     },
     {
         "type": "one",
-        "points": 4,
-        "temps": 40,
-        "question": "Quelle valeur sera affichée si on exécute le programme ci-dessus ? ",
-        "code": "def f():\\n    a=3\\n    b=a+1\\n    print((a**2+b**2)**0.5)\\n\\nf()",
+        "points": 1,
+        "temps": 20,
+        "question": "Les variables locaux d'un sous-programme sont accessibles à partir du programme principal :",
+        "code": "",
         "lang": "python",
-        "options": ["5.0", "13.0", "12.5", "7.0"]
+        "options": ["Faux", "Vrai"]
     },
     {
-        "type": "entry",
-        "points": 4,
-        "temps": 50,
-        "question": "Écrire le résultat Afficher par cette procédure :",
-        "code": "def maFonction():\\n    s = 0\\n    ch = '2info2'\\n    s += int(ch[0])**2\\n    s += ord(ch[-1])\\n   print(s)",
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Les variables du programme principal sont accessibles à partir d'un sous-programme",
+        "code": "",
         "lang": "python",
-        "options": [[1, "54"]]
+        "options": ["Vrai", "Faux"]
+    },
+    {
+        "type": "multi",
+        "points": 1,
+        "temps": 40,
+        "question": "Les avantages de l'utilisation d'un sous-programme sont :",
+        "code": "",
+        "lang": "python",
+        "options": [["Meilleure lisibilité.", true], ["Diminution du risque d'erreurs.", true], ["Réutilisation des fonctions déjà existantes.", true], ["Simplicité de l'entretien.", true], ["Favorisation du travail seul.", false]]
+    },
+    {
+        "type": "drag",
+        "points": 2,
+        "temps": 40,
+        "question": "Relier les blocs de chaque parties pour obtenir des réponses correctes :",
+        "code": "",
+        "lang": "python",
+        "options": [["La définition d'une procédure en Python", "Doit commencer par le mot clé def"], ["Le traitement d'une procédure en Python", "Doit être indenté"], ["Ecrire les instructions suivantes au début de ligne", "Permet de marquer la fin d'une procédure en Python"]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Une procédure doit obligatoirement retourner une et une seule valeur de type simple",
+        "code": "",
+        "lang": "python",
+        "options": ["Faux, c'est le rôle des fonctions", "Vrai"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 20,
+        "question": "Les types de données simples sont :",
+        "code": "",
+        "lang": "python",
+        "options": [["Entier", true], ["Réel", true], ["Booléen", true], ["Caractère", true], ["Chaîne de caractères", true], ["Tableau", false]]
+    },
+    {
+        "type": "multi",
+        "points": 1,
+        "temps": 20,
+        "question": "Les paramètres effectifs et les paramètres formels d'une procédure doivent correspondent :",
+        "code": "",
+        "lang": "python",
+        "options": [["En ordre", true], ["En types", true], ["En nombres", true]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Le symbole @ est utilisé pour",
+        "code": "",
+        "lang": "python",
+        "options": ["Passer un paramètre par adresse", "Définir une constante", "Définir une procédure", "Passer seulement les paramètres de type composés par adresse"]
+    },
+    {
+        "type": "sort",
+        "points": 2,
+        "temps": 50,
+        "question": "Ordonner ces instructions pour obtenir une procédure qui affiche le minimum de deux nombres :",
+        "code": "",
+        "lang": "python",
+        "options": ["Procédure minimum(a : entier, b : entier)", "Début", ". . . . si a &#62; b alors", ". . . . . . . . Ecrire(b)", ". . . . sinon", ". . . . . . . . Ecrire(a)", ". . . . fin si", "Fin"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Qu'affiche l'appel : moment_journee (10) ?",
+        "code": "Procédure moment_journee(heure : entier)\\nDébut\\n    si heure ≤ 7 alors\\n        reponse ← \\"nuit\\"\\n    sinon si 8 ≤ heure ≤ 12 alors\\n        reponse ← \\"matin\\"\\n    sinon si 12 ≤ heure ≤ 20 alors\\n        reponse ← \\"apres-midi\\"\\n    sinon\\n        reponse ← \\"soir\\"\\n    fin si\\n    Ecrire(reponse)\\nFin",
+        "lang": "pascal",
+        "options": ["matin", "nuit", "apres-midi", "soir"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 50,
+        "question": "L'exécution du programme affiche : a = 5, b = 10. Comment corriger l'erreur !",
+        "code": "Algorithme test\\nDébut\\n    a ← 5\\n    b ← 10\\n    permuter(a, b)\\n    Ecrire(\\"a = \\", a, \\", b = \\", b)\\nFin\\n\\nProcédure permuter(a : entier, b : entier)\\nDébut\\n    temp ← a\\n    a ← b\\n    b ← temp\\nFin",
+        "lang": "python",
+        "options": ["Ajouter le symbole @ avant les paramètre formels", "Ajouter l'instruction global a, b", "Ne pas utiliser des paramètres formels", "Ajouter le symbole & avant les paramètre formels"]
     }
 ]`;

@@ -1,0 +1,75 @@
+head = `{
+    "title": "La structure conditionnelle à choix",
+    "subTitle": "selon",
+    "author": "kerimbm",
+    "date": "31/10/2022",
+    "description": "Section : La structure conditionnelle à choix",
+    "norepeat": false,
+    "quizid": 1667200076144
+}`;
+
+data = `[
+    {
+        "type": "multi",
+        "points": 3,
+        "temps": 30,
+        "question": "La structure Selon permet d’évaluer des conditions de type :",
+        "code": "",
+        "lang": "python",
+        "options": [["sélecteur = valeur", true], ["sélecteur &#62; valeur", false], ["sélecteur ≠ valeur", false], ["sélecteur ∈ liste valeurs", false]]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "On peut toujours remplacer la structure conditionnelle généralisée par la structure selon",
+        "code": "",
+        "lang": "python",
+        "options": ["Faux", "Vrai"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "On peut toujours remplacer la structure Selon par la structure conditionnelle généralisée",
+        "code": "",
+        "lang": "python",
+        "options": ["Vrai", "Faux"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Le mot clé Selon se traduit en Python par :",
+        "code": "",
+        "lang": "python",
+        "options": ["match", "case", "switch"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Le mot clé sinon se traduit en Python par :",
+        "code": "",
+        "lang": "python",
+        "options": ["case _", "else", "case *", "or"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "En Python, si un traitement doit s'exécuter en fonction de plusieurs valeurs, ces valeurs doivent être séparées par :",
+        "code": "",
+        "lang": "python",
+        "options": ["|", ",", ":", "-"]
+    },
+    {
+        "type": "multi",
+        "points": 3,
+        "temps": 30,
+        "question": "Quelle valeur de jour permet d'afficher \\"week-end\\" ?",
+        "code": "Selon jour\\n1, 2, 3, 4, 5 : Ecrire(\\"Début de semaine\\")\\n6, 7 : Ecrire(\\"weed-end\\")\\nsinon Ecrire(\\"Jour invalide\\")\\nfin selon",
+        "lang": "python",
+        "options": [["5", false], ["6", true], ["7", true], ["8", false]]
+    }
+]`;

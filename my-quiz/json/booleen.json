@@ -1,0 +1,93 @@
+head = `{
+    "title": "Le type booléen",
+    "subTitle": "booleen",
+    "author": "kerimbm",
+    "date": "30/10/2022",
+    "description": "Section : Le type booléen",
+    "norepeat": false,
+    "quizid": 1667235490273
+}`;
+
+data = `[
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 20,
+        "question": "Lesquelles de ces valeurs sont des booléens ?",
+        "code": "",
+        "lang": "python",
+        "options": [["Vrai et Faux", true], ["True et False", true], ["0 et 1", false]]
+    },
+    {
+        "type": "drag",
+        "points": 3,
+        "temps": 40,
+        "question": "Donner les résultats des expressions suivantes :",
+        "code": "",
+        "lang": "python",
+        "options": [["RacineCarré(9) + 8 ≥ 11", "Vrai"], ["Ent(-9 / 2) + 3 ≥ 0", "Faux"]]
+    },
+    {
+        "type": "entry",
+        "points": 3,
+        "temps": 40,
+        "question": "Une fois exécuté, le programme affiche Vrai, quelle est la valeur initiale de la variable a ?",
+        "code": "a ← ...\\na ← a + 3\\na ← a * 2\\nb ← a&#62;11 et a&#60;13\\nEcrire(b)",
+        "lang": "python",
+        "options": [[1, "3"]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Qu'affiche le programme suivant :",
+        "code": "a ← 6\\nb ← 10\\nEcrire(a = 6)",
+        "lang": "python",
+        "options": ["Vrai", "Faux", "a = 6"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Qu'affiche le programme suivant :",
+        "code": "a ← 6\\nb ← 10\\nEcrire( a = 10 ou b = 10 )",
+        "lang": "python",
+        "options": ["Vrai", "Faux", "b = 10"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Qu'affiche le programme suivant :",
+        "code": "a ← 6\\nb ← 10\\nEcrire( non (b = 6) )",
+        "lang": "python",
+        "options": ["Vrai", "Faux", "b = 6"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Qu'affiche le programme suivant :",
+        "code": "a ← 6\\nb ← 10\\nEcrire( non a = 10 et b = 10 )",
+        "lang": "python",
+        "options": ["Vrai", "Faux", "Non"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Qu'affiche le programme suivant :",
+        "code": "Ecrire(ent(11/3) = 3)",
+        "lang": "python",
+        "options": ["Vrai", "Faux", "3.666666666"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Laquelle des expressions suivantes n'est pas une expression booléenne ?",
+        "code": "",
+        "lang": "python",
+        "options": ["3 + 4", "Vrai", "3 = 4", "3 + 4 = 7"]
+    }
+]`;

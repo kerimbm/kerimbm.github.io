@@ -1,10 +1,11 @@
 head = `{
     "title": "La structure conditionnelle simple",
-    "author": "me",
-    "date": "05/09/2020",
+    "subTitle": "si-simple",
+    "author": "kerimbm",
+    "date": "30/10/2022",
     "description": "Section : La structure conditionnelle simple",
     "norepeat": false,
-    "quizid": 1605360367408
+    "quizid": 1667166869988
 }`;
 
 data = `[
@@ -13,7 +14,7 @@ data = `[
         "points": 3,
         "temps": 60,
         "question": "Ecrire le résultat du programme suivant :",
-        "code": "a, b = 5, 7\\nif a &#62; b :\\n    m = a\\nelse :\\n    m = b\\nprint(m)",
+        "code": "a ← 5\\nb ← 7\\nsi a &#62; b alors\\n    m ← a\\nsinon\\n    m ← b\\nfin si\\nEcrire(m)",
         "lang": "python",
         "options": [[1, "7"]]
     },
@@ -33,14 +34,14 @@ data = `[
         "question": "Ordonner les instructions suivantes pour obtenir un programme qui affiche 10 :",
         "code": "",
         "lang": "python",
-        "options": ["a, b = 2, 8", "if a &#62; b :", "    a -= b", "else :", "    a += b", "print(a)"]
+        "options": ["a ← 2", "si a &#62; 8 alors", ". . . . a ← a - 8", "sinon", ". . . . a ← a + 8", "fin si", "Ecrire(a)"]
     },
     {
         "type": "one",
         "points": 3,
         "temps": 60,
         "question": "Quel est le rôle de ce programme ?",
-        "code": "a, b = 5, 3\\nif a &#60; b :\\n    m = a\\nelse :\\n    m = b\\nprint(m)",
+        "code": "a ← 5\\nb ← 3\\nsi a &#60; b alors\\n    m ← a\\nsinon\\n    m ← b\\nfin si\\nEcrire(m)",
         "lang": "python",
         "options": ["Afficher le minimum de deux nombres", "Afficher le maximum de deux nombres", "Permuter deux nombres"]
     },
@@ -49,15 +50,15 @@ data = `[
         "points": 4,
         "temps": 50,
         "question": "Quel est le rôle de ce programme ?",
-        "code": "a = -3\\nif a &#60; 0 :\\n    a = -a\\nprint(a)",
+        "code": "a ← -3\\nsi a &#60; 0 alrs\\n    a ← -a\\nfin si\\nEcrire(a)",
         "lang": "python",
         "options": ["Afficher la valeur absolu de a", "Afficher l'inverse de a", "Afficher -3"]
     },
     {
         "type": "one",
         "points": 3,
-        "temps": 20,
-        "question": "A quoi sert le mot-clé if dans Python ?",
+        "temps": 30,
+        "question": "A quoi sert le mot-clé si en algorithmique ?",
         "code": "",
         "lang": "python",
         "options": ["A vérifier si une condition est remplie", "A exécuter un bout de code tant que la condition est remplie.", "A répéter un bloc d'instructions plusieurs fois"]

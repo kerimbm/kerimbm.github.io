@@ -197,6 +197,12 @@
                         break;
                     
                     case "drag":
+                        //Réinitialisation des variables du fichier js/drag.js
+                        selected = null;
+                        z_index = 10;
+                        elmColl = null;
+                        tabR={};
+                        
                         document.addEventListener("mousemove", dragMove, false);
                         for(i=0; i<reponse.length; i++)
                             tabIRepDrag[i] = i;
@@ -462,7 +468,7 @@
                 stage1.innerHTML += '<div class="result"><br>Vous avez terminé le quiz !</div>' +
                 '<div style="font-size: 24px; margin-top: 60px; color: #666;">' +
                 '<div>Total des questions : ' + numberOfQuestions + '</div>' +
-                '<div style="margin-top: 15px;">Nombre de questions correctes : ' + score + '</div>' +
+                '<div style="margin-top: 15px;">Nombre de réponses correctes : ' + score + '</div>' +
                 '<div style="margin-top: 15px;">Votre note est : <span style="margin-left: 20px;font-family: arial; font-size: 70px; font-weight: bolt;">' + points + '/' + total + '</span></div>' +
                 '</div>';
                 

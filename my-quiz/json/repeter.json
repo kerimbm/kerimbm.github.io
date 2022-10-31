@@ -1,0 +1,93 @@
+head = `{
+    "title": "La structure « Répéter ... Jusqu'à ... »",
+    "subTitle": "repeter",
+    "author": "kerimbm",
+    "date": "31/10/2022",
+    "description": "Section : La structure « Répéter ... Jusqu'à ... »",
+    "norepeat": false,
+    "quizid": 1667246978526
+}`;
+
+data = `[
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Le nombre d'itérations dans une boucle Répéter ... Jusqu'à est connue à l'avance :",
+        "code": "",
+        "lang": "python",
+        "options": ["Faux", "Vrai"]
+    },
+    {
+        "type": "entry",
+        "points": 2,
+        "temps": 40,
+        "question": "Quel est la dernière valeur affichée par ce programme ?",
+        "code": "i ← 15\\nRépéter\\n    i ← i + 1\\n    Ecrire(i)\\nJusqu'à i ≤ 18",
+        "lang": "python",
+        "options": [[1, "19"]]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 40,
+        "question": "Pour que le traitement à l'intérieur d'une structure Répéter ... Jusqu'à s'exécute :",
+        "code": "",
+        "lang": "python",
+        "options": ["La condition doit être évaluée à Faux", "La condition doit être évaluée à Vrai"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 30,
+        "question": "La structure Répéter ... Jusqu'à s'arrête lorsque :",
+        "code": "",
+        "lang": "python",
+        "options": ["La condition est évaluée à Vrai", "La condition est évaluée à Faux"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 40,
+        "question": "Quel est le rôle de ce programme ?",
+        "code": "Répéter\\n    Ecrire(\\"Donner un entier\\")\\n    Lire(nb)\\nJusqu'à nb ≥ 0",
+        "lang": "python",
+        "options": ["Permet de saisir un entier positif", "Permet de saisir un entier négatif", "Permet de saisir un entier différent de 0"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 30,
+        "question": "Dans une boucle Répéter ... Jusqu'à, le traitement :",
+        "code": "",
+        "lang": "python",
+        "options": [["S'exécute au moins une fois", true], ["S'exécute au moins zéro fois", false], ["Peut s'exécuter plusieurs fois", true], ["Peut ne pas s'exécuter", false]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Dans une boucle Répéter ... Jusqu'à, le traitement :",
+        "code": "",
+        "lang": "python",
+        "options": ["Doit modifier la valeur de la condition", "Ne doit pas modifier la valeur de la condition", "Doit être vide"]
+    },
+    {
+        "type": "multi",
+        "points": 3,
+        "temps": 40,
+        "question": "Dans une boucle Répéter ... Jusqu'à, si le traitement ne modifie pas la condition :",
+        "code": "",
+        "lang": "python",
+        "options": [["La boucle sera infini", true], ["On doit forcer l'arrêt du programme par clic sur X", true], ["Le programme s'arrête après 5mn d'exécution", false], ["Le programme s'arrête immédiatement", false]]
+    },
+    {
+        "type": "sort",
+        "points": 2,
+        "temps": 30,
+        "question": "Ordonner les instructions suivante pour obtenir un programme valide :",
+        "code": "",
+        "lang": "python",
+        "options": ["Répéter", ". . . . Lire(n)", "Jusqu'à 0 ≤ n ≤ 20", "Ecrire(n)"]
+    }
+]`;

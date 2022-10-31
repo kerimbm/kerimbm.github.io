@@ -1,71 +1,71 @@
 head = `{
     "title": "Les fonctions",
     "subTitle": "fonction",
-    "author": "me",
-    "date": "05/09/2020",
+    "author": "kerimbm",
+    "date": "31/10/2022",
     "description": "Section : Les fonctions",
     "norepeat": false,
-    "quizid": 1628889273051
+    "quizid": 1667250447845
 }`;
 
 data = `[
     {
         "type": "multi",
         "points": 2,
-        "temps": 30,
-        "question": "Une fonction qui renvoie une valeur peut être placée :",
+        "temps": 40,
+        "question": "Une fonction peut être placée :",
         "code": "",
         "lang": "python",
-        "options": [["A droite du signe d'affectation", true], ["Dans une autre fonction comme \\"print()\\"", true], ["A gauche du signe d'affectation", false]]
+        "options": [["A droite du signe d'affectation", true], ["Dans une autre fonction comme Ecrire()", true], ["A gauche du signe d'affectation", false], ["Dans une condition", true]]
     },
     {
         "type": "one",
-        "points": 3,
+        "points": 2,
         "temps": 30,
         "question": "Qu'affiche le programme suivant ?",
-        "code": "def f(x):\\n    return 3*x**2 - 6\\n\\nprint(f(3))",
+        "code": "Fonction f(x : entier) : entier\\nDébut\\n    returner 3*x^2 - 6\\nFin\\nEcrire(f(3))",
         "lang": "python",
-        "options": ["21", "22", "12", "rien"]
+        "options": ["21", "22", "12", "Erreur"]
     },
     {
         "type": "multi",
         "points": 2,
-        "temps": 20,
+        "temps": 30,
         "question": "Lesquels des instructions suivantes sont incorrectes :",
         "code": "",
         "lang": "python",
-        "options": [["a = sqrt(x)", false], ["print(sqrt(x))", false], ["sqrt(x) = 3", true]]
+        "options": [["a = racineCarré(x)", false], ["Ecrire(racineCarré(x))", false], ["racineCarré(x) = 3", true], ["Lire(racineCarré(x))", true]]
     },
     {
         "type": "entry",
-        "points": 3,
+        "points": 1,
         "temps": 20,
         "question": "Que renvoie : f (12) ?",
-        "code": "def f(x) :\\n   return 2 * x - 3",
+        "code": "Fonction f(x : entier) : entier\\nDébut\\n   returner 2 * x - 5\\nFin",
         "lang": "python",
-        "options": [[1, "21"]]
+        "options": [[1, "19"]]
     },
     {
         "type": "one",
-        "points": 2,
-        "temps": 40,
+        "points": 1,
+        "temps": 20,
         "question": "Que renvoie : fois_deux(plus_un(10)) ?",
-        "code": "def plus_un(x) :\\n   return x + 1\\ndef fois_deux(x) :\\n   return 2 * x",
+        "code": "Fonction plus_un(x : entier) : entier\\nDébut\\n   returner x + 1\\nFin\\n\\nFonction fois_deux(x : entier) : entier\\nDébut\\n   returner x * 2\\nFin",
         "lang": "python",
         "options": ["22", "21", "20", "23"]
     },
     {
         "type": "entry",
-        "points": 3,
+        "points": 2,
         "temps": 30,
         "question": "Que renvoie : f (9, 2) ?",
-        "code": "def f(x, y) :\\n   resultat = 3 * (x - y) + 2\\n   return resultat",
+        "code": "Fonction f(x : entier, y : entier) : entier\\nDébut\\n   res ← 3 * (x - y) + 2\\n   returner res\\nFin",
         "lang": "python",
         "options": [[1, "23"]]
     },
     {
         "type": "multi",
-        "points": 3,
+        "points": 2,
         "temps": 40,
         "question": "Les avantages de l'utilisation d'un sous-programme sont :",
         "code": "",
@@ -76,9 +76,36 @@ data = `[
         "type": "drag",
         "points": 2,
         "temps": 40,
-        "question": "Relier chaque deux parties pour obtenir des réponses correctes :",
+        "question": "Relier les blocs de chaque parties pour obtenir des réponses correctes :",
         "code": "",
         "lang": "python",
-        "options": [["La définition d'une fonction", "Doit commencer par def"], ["Le bloc d'instruction à l'intérieur d'une fonction", "Doit être indenté"], ["La fin d'une fonction", "Doit être marquée par un décalage de code à gauche"], ["global", "Doit être placer avant la modification de la variable"]]
+        "options": [["La définition d'une fonction en Python", "Doit commencer par le mot clé def"], ["Le traitement d'une fonction en Python", "Doit être indenté"], ["Ecrire les instructions suivantes au début de ligne", "Permet de marquer la fin d'une fonction en Python"]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Une fonction doit obligatoirement retourner une et une seule valeur de type simple",
+        "code": "",
+        "lang": "python",
+        "options": ["Vrai", "Faux"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 20,
+        "question": "Les types de données simples sont :",
+        "code": "",
+        "lang": "python",
+        "options": [["Entier", true], ["Réel", true], ["Booléen", true], ["Caractère", true], ["Chaîne de caractères", true], ["Tableau", false]]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 20,
+        "question": "Les paramètres effectifs et les paramètres formels d'une fonction doivent correspondent :",
+        "code": "",
+        "lang": "python",
+        "options": [["En ordre", true], ["En types", true], ["En nombres", true]]
     }
 ]`;

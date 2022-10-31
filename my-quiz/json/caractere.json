@@ -1,0 +1,66 @@
+head = `{
+    "title": "Le type caractère",
+    "subTitle": "caractere",
+    "author": "kerimbm",
+    "date": "30/10/2022",
+    "description": "Section : Le type caractère",
+    "norepeat": false,
+    "quizid": 1667151368218
+}`;
+
+data = `[
+    {
+        "type": "entry",
+        "points": 3,
+        "temps": 20,
+        "question": "Qu'affiche l'instruction ci-dessous :",
+        "code": "Ecrire('A' &#62; 'B')",
+        "lang": "python",
+        "options": [[1, "FAUX", "FAUX", "FALSE", "FALSE"]]
+    },
+    {
+        "type": "drag",
+        "points": 3,
+        "temps": 20,
+        "question": "Donner le code ASCII de chaque caractère :",
+        "code": "",
+        "lang": "python",
+        "options": [["\\"a\\"", "97"], ["\\"0\\"", "48"], ["\\"A\\"", "65"]]
+    },
+    {
+        "type": "drag",
+        "points": 3,
+        "temps": 40,
+        "question": "Donner le résultat de chaque instruction :",
+        "code": "",
+        "lang": "python",
+        "options": [["chr(ord(\\"A\\") + 32)", "\\"a\\""], ["chr(ord(\\"a\\") - 32)", "\\"A\\""], ["chr(67)", "\\"C\\""], ["ord(\\"Z\\")", "90"]]
+    },
+    {
+        "type": "entry",
+        "points": 4,
+        "temps": 40,
+        "question": "Donner la valeur de la variable A après l'exécution de l'instruction suivante :",
+        "code": "A ← ord(\\"A\\") + 26 = ord(\\"Z\\")",
+        "lang": "python",
+        "options": [[1, "FAUX", "FAUX", "FALSE", "FALSE"]]
+    },
+    {
+        "type": "multi",
+        "points": 4,
+        "temps": 30,
+        "question": "Une variable de type caractère peut avoir les valeurs :",
+        "code": "",
+        "lang": "python",
+        "options": [["\\"a\\"", true], ["\\"\\" (Caractère vide)", false], ["\\" \\" (Espace)", true], ["0", false], ["\\"12\\"", false], ["\\"9\\"", true]]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Donner le résultat de l'expression suivante :",
+        "code": "A ← \\"A\\" + 2",
+        "lang": "python",
+        "options": ["Erreur", "67", "\\"C\\""]
+    }
+]`;

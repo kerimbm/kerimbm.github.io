@@ -1,93 +1,75 @@
 head = `{
     "title": "Les tableaux",
     "subTitle": "tableau",
-    "author": "me",
-    "date": "24/06/2021",
+    "author": "kerimbm",
+    "date": "30/10/2022",
     "description": "Section : Les tableaux",
     "norepeat": false,
-    "quizid": 1628875880985
+    "quizid": 1667165621272
 }`;
 
 data = `[
     {
-        "type": "entry",
-        "points": 2,
-        "temps": 20,
-        "question": "Que contient : min(note) ?",
-        "code": "note = [19, 8, 5, 15, 11]",
-        "lang": "python",
-        "options": [[1, "5"]]
-    },
-    {
         "type": "one",
         "points": 2,
         "temps": 20,
-        "question": "Que contient : puissance[0] ?",
-        "code": "puissance = [1, 2, 4, 8, 16, 32, 64, 128]",
+        "question": "Que contient : puissance[2] ?",
+        "code": "puissance = array([1, 2, 4, 8, 16, 32, 64, 128])",
         "lang": "python",
-        "options": ["1", "2", "4", "8"]
-    },
-    {
-        "type": "entry",
-        "points": 2,
-        "temps": 20,
-        "question": "Que contient : max(note) ?",
-        "code": "note = [19, 8, 5, 15, 11]",
-        "lang": "python",
-        "options": [[1, "19"]]
-    },
-    {
-        "type": "multi",
-        "points": 2,
-        "temps": 30,
-        "question": "Que contient la liste : note ?",
-        "code": "note = [19, 8, 5, 15, 11]\\nnote.sort()",
-        "lang": "python",
-        "options": [["[5, 8, 11, 15, 19]", true], ["[]", false], ["[19, 8, 5, 15, 11]", false], ["[19, 15, 11, 8, 5]", false]]
-    },
-    {
-        "type": "entry",
-        "points": 2,
-        "temps": 20,
-        "question": "Que vaut maintenant : len(chiffre) ?",
-        "code": "chiffre = [0, 1, 2, 3, 4, 5]\\nchiffre.append(8)",
-        "lang": "python",
-        "options": [[1, "7"]]
-    },
-    {
-        "type": "multi",
-        "points": 2,
-        "temps": 30,
-        "question": "Que contient la liste : note ?",
-        "code": "note = [19, 8, 5, 15, 11]\\nnote.reverse()",
-        "lang": "python",
-        "options": [["[5, 8, 11, 15, 19]", false], ["[19, 15, 11, 8, 5]", false], ["[11, 15, 5, 8, 19]", true], ["[0, 0, 0, 0, 0]", false]]
+        "options": ["4", "1", "2", "8"]
     },
     {
         "type": "one",
         "points": 3,
-        "temps": 40,
-        "question": "Que contient la liste : multiple ?",
-        "code": "multiple = []\\nfor compteur in range(0, 5) :\\n   multiple.append(3 * compteur)",
+        "temps": 30,
+        "question": "Je veux déclarer un tableau T de 10 entiers en Python. Quelle est la bonne syntaxe ?",
+        "code": "",
         "lang": "python",
-        "options": ["[0, 3, 6, 9, 12]", "[0, 3, 6, 9, 12, 15, 18]", "[3, 6, 9, 12, 15]", "[0, 3, 6, 9, 12, 15]"]
-    },
-    {
-        "type": "multi",
-        "points": 2,
-        "temps": 20,
-        "question": "Que contient la liste : impair ?",
-        "code": "impair = [1, 3, 5, 7, 9, 3]\\nimpair.remove(3)",
-        "lang": "python",
-        "options": [["[1, 5, 7, 9, 3]", true], ["[1, 3, 5, 9, 3]", false], ["[1, 5, 7, 9]", false], ["[1, 3, 5, 7, 9, 3]", false]]
+        "options": ["T = array([int()]*10)", "T = array([int]*10)", "T = array([int()*10])", "T = array([int(10)])"]
     },
     {
         "type": "multi",
         "points": 3,
         "temps": 30,
-        "question": "Que contient la liste : impair ?",
-        "code": "note = [7, 3, 5, 1, 9]\\nnote.sort()\\nnote.reverse()",
+        "question": "Pour utiliser les tableaux en Python, il faut ajouter l'instruction :",
+        "code": "",
         "lang": "python",
-        "options": [["[9, 7, 5, 3, 1]", true], ["[7, 3, 5, 1, 9]", false], ["Erreur", false], ["[9, 1, 5, 3, 7]", false]]
+        "options": [["from numpy import array", true], ["from numpy import *", true], ["from numpy import table", false], ["import array from numpy", false], ["import array", false]]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Quelle instruction faut-il écrire pour remplacer la valeur à l'indice 13 par 14 ?",
+        "code": "",
+        "lang": "python",
+        "options": ["tab[13] ← 14", "tab[14] ← 13", "tab 13 ← 14", "tab(13) ← 14"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 30,
+        "question": "Que produit le code suivant ?",
+        "code": "data = array([10, 20, 30])\\ndata[1] = 54",
+        "lang": "python",
+        "options": ["[10, 54, 30]", "Une erreur", "[54, 20, 30]", "54, 20, 30", "(54, 20, 30)"]
+    },
+    {
+        "type": "drag",
+        "points": 3,
+        "temps": 50,
+        "question": "Relier chaque déclaration avec son rôle :",
+        "code": "",
+        "lang": "python",
+        "options": [["T = array([int()]*10)", "Tableau de 10 entiers"], ["T = array([float()]*10)", "Tableau de 10 réels"], ["T = array([bool()]*10)", "Tableau de 10 booléens"], ["T = array([str()]*n)", "Tableau de n caractères"], ["T = array([str]*n)", "Tableau de n chaînes de caractères"]]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 30,
+        "question": "Que produit le programme suivant :",
+        "code": "T = array([int()]*3)\\nT[0] = 4\\nT[1] = T[0] + 3\\nT[2] = T[1] * 2\\nT[3] = T[2] - 1",
+        "lang": "python",
+        "options": ["Erreur", "13", "[4, 7, 14, 13]"]
     }
 ]`;

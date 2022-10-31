@@ -1,0 +1,111 @@
+head = `{
+    "title": "La structure « Tant que ... faire »",
+    "subTitle": "tantque",
+    "author": "kerimbm",
+    "date": "31/10/2022",
+    "description": "Section : La structure « Tant que ... faire »",
+    "norepeat": false,
+    "quizid": 1667247716327
+}`;
+
+data = `[
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Le nombre d'itérations dans une boucle Tant que ... faire est inconnue à l'avance :",
+        "code": "",
+        "lang": "python",
+        "options": ["Vrai", "Faux"]
+    },
+    {
+        "type": "entry",
+        "points": 2,
+        "temps": 30,
+        "question": "Quel est la valeur affichée par ce programme ?",
+        "code": "i ← 15\\nTantque i &#60; 18 faire\\n    i ← i + 1\\nfin tant que\\nEcrire(i)",
+        "lang": "python",
+        "options": [[1, "18"]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 30,
+        "question": "Pour que le traitement à l'intérieur d'une structure Tant que ... faire s'exécute :",
+        "code": "",
+        "lang": "python",
+        "options": ["La condition doit être évaluée à Vrai", "La condition doit être évaluée à Faux"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "L'exécution du traitement à l'intérieur de la structure Tant que ... faire s'arrête lorsque :",
+        "code": "",
+        "lang": "python",
+        "options": ["La condition est évaluée à Faux", "La condition est évaluée à Vrai"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 40,
+        "question": "Dans une boucle Tant que ... faire, le traitement :",
+        "code": "",
+        "lang": "python",
+        "options": [["S'exécute au moins une fois", false], ["S'exécute au moins zéro fois", true], ["Peut s'exécuter plusieurs fois", true], ["Peut ne pas s'exécuter", true]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 60,
+        "question": "Qu'affiche ce programme lors de son exécution ?",
+        "code": "jour ← 1\\nTant que jour ≤ 7 faire\\n    Ecrire(jour)\\n    jour ← jour + 1\\nfin tant que",
+        "lang": "python",
+        "options": ["1 2 3 4 5 6 7", "2 3 4 5 6 7", "1 2 3 4 5 6 7 8", "2 3 4 5 6 7 8"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 60,
+        "question": "Qu'affiche ce programme lors de son exécution ?",
+        "code": "jour ← 1\\nTant que jour ≤ 7 faire\\n    jour ← jour + 1\\nfin tant que\\nEcrire(jour)",
+        "lang": "python",
+        "options": ["8", "7", "2 3 4 5 6 7", "2 3 4 5 6 7 8"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 60,
+        "question": "Qu'affiche ce programme lors de son exécution ?",
+        "code": "nombre ← 1\\nTant que nombre &#62; 0 faire\\n    Ecrire(nombre)\\n    nombre ← nombre + 1\\nfin tant que",
+        "lang": "python",
+        "options": ["1 2 3 4 5 6 7 8 9 ... INFINI", "Erreur", "Rien", "1 2 3 4 5 6 7 8 9"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Dans une boucle Tant que ... faire, le traitement :",
+        "code": "",
+        "lang": "python",
+        "options": ["Doit modifier la valeur de la condition", "Ne doit pas modifier la valeur de la condition", "Doit être vide"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 40,
+        "question": "Dans une boucle Tant que ... faire, si le traitement ne modifie pas la condition :",
+        "code": "",
+        "lang": "python",
+        "options": [["La boucle sera infini", true], ["On doit forcer l'arrêt du programme par clic sur X", true], ["Le programme s'arrête après 5mn d'exécution", false], ["Le programme s'arrête immédiatement", false]]
+    },
+    {
+        "type": "drag",
+        "points": 2,
+        "temps": 50,
+        "question": "Trouver la description de chaque bloc à gauche",
+        "code": "",
+        "lang": "python",
+        "options": [["La boucle Pour", "Nombre d'itération est connue à l'avance"], ["La boucle Répéter ... jusqu'à", "S'exécute au mois une fois"], ["La boucle Tant que ... faire", "S'exécute au mois zéro fois"], ["Une structure itérative", "Répéter un traitement pluieurs fois"]]
+    }
+]`;
