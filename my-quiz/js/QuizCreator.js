@@ -276,7 +276,7 @@
                 var subTitle = document.getElementById("subTitle").value;
                 var author = document.getElementById("author").value.replace(/"/gi, '\\\\"').replace(/</gi, '&#60;').replace(/>/gi, '&#62;');
                 var dateCreation = document.getElementById("datecreation").value.replace(/"/gi, '\\\\"');
-                var description = document.getElementById("description").value.replace(/"/gi, '\\\\"').replace(/\n/gi, "<br>").replace(/</gi, '&#60;').replace(/>/gi, '&#62;');
+                var description = document.getElementById("description").value.replace(/"/gi, '\\\\"').replace(/</gi, '&#60;').replace(/>/gi, '&#62;').replace(/\n/gi, "<br>");
                 var norepeat = document.getElementById("norepeat").checked;
                 
                 jsonHead = 'head = `{' + `
@@ -314,7 +314,7 @@
         "temps": ` + temps.value;
                                 qhead = document.getElementById('qhead' + i);
                                 json += `,
-        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/\n/gi, "<br>").replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
+        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/</gi, '&#60;').replace(/>/gi, '&#62;').replace(/\n/gi, "<br>") + `"`;
                                 code = document.getElementById('code' + i);
                                 json += `,
         "code": "` + code.value.replace(/"/gi, '\\\\"').replace(/\n/gi, '\\\\n').replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
@@ -351,7 +351,7 @@
         "temps": ` + temps.value;
                                 qhead = document.getElementById('qhead' + i);
                                 json += `,
-        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/\n/gi, "<br>").replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
+        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/</gi, '&#60;').replace(/>/gi, '&#62;').replace(/\n/gi, "<br>") + `"`;
                                 code = document.getElementById('code' + i);
                                 json += `,
         "code": "` + code.value.replace(/"/gi, '\\\\"').replace(/\n/gi, '\\\\n').replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
@@ -393,7 +393,7 @@
         "temps": ` + temps.value;
                                 qhead = document.getElementById('qhead' + i);
                                 json += `,
-        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/\n/gi, "<br>").replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
+        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/</gi, '&#60;').replace(/>/gi, '&#62;').replace(/\n/gi, "<br>") + `"`;
                                 code = document.getElementById('code' + i);
                                 json += `,
         "code": "` + code.value.replace(/"/gi, '\\\\"').replace(/\n/gi, '\\\\n').replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
@@ -435,7 +435,7 @@
         "temps": ` + temps.value;
                                 qhead = document.getElementById('qhead' + i);
                                 json += `,
-        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/\n/gi, "<br>").replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
+        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/</gi, '&#60;').replace(/>/gi, '&#62;').replace(/\n/gi, "<br>") + `"`;
                                 code = document.getElementById('code' + i);
                                 json += `,
         "code": "` + code.value.replace(/"/gi, '\\\\"').replace(/\n/gi, '\\\\n').replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
@@ -473,7 +473,7 @@
         "temps": ` + temps.value;
                                 qhead = document.getElementById('qhead' + i);
                                 json += `,
-        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/\n/gi, "<br>").replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
+        "question": "` + qhead.value.replace(/"/gi, '\\\\"').replace(/</gi, '&#60;').replace(/>/gi, '&#62;').replace(/\n/gi, "<br>") + `"`;
                                 code = document.getElementById('code' + i);
                                 json += `,
         "code": "` + code.value.replace(/"/gi, '\\\\"').replace(/\n/gi, '\\\\n').replace(/</gi, '&#60;').replace(/>/gi, '&#62;') + `"`;
@@ -636,6 +636,8 @@
                     if(scriptElm[i].getAttribute("src") == "json/" + jsonFile)
                         scriptElm[i].parentNode.removeChild(scriptElm[i]);
                 jsonFile = btn.files[0].name;
+                let baseJsonFile = jsonFile.substring(0, jsonFile.length-5);
+                //console.log(baseJsonFile);
                 
                 let headElm = document.getElementsByTagName('head');
                 tag = document.createElement('script');
@@ -645,6 +647,7 @@
                 tag.onload = function() {
                     var jsonHead = JSON.parse(head);
                     document.getElementById("title").value = jsonHead.title.replace(/\\\\"/gi, '"').replace(/&#60;/gi, '<').replace(/&#62;/gi, '>');
+                    document.getElementById("subTitle").value = baseJsonFile;
                     document.getElementById("author").value = jsonHead.author.replace(/\\\\"/gi, '"').replace(/&#60;/gi, '<').replace(/&#62;/gi, '>');
                     document.getElementById("datecreation").value = jsonHead.date.replace(/\\\\"/gi, '"');
                     document.getElementById("description").value = jsonHead.description.replace(/\\\\"/gi, '"').replace(/<br>/gi, "\n").replace(/&#60;/gi, '<').replace(/&#62;/gi, '>');
@@ -733,6 +736,7 @@
             
             window.onload = function(){
                 document.getElementById("title").value = '';
+                document.getElementById("subTitle").value = '';
                 document.getElementById("author").value = '';
                 document.getElementById("datecreation").value = _getDate();
                 document.getElementById("description").value = '';
