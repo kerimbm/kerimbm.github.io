@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Editor</title>
+  <style type="text/css" media="screen">
+    #maindiv, #maindiv::after, #maindiv::before {
+        -webkit-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-app-region: no-drag;
+        cursor: default;
+    }
+  </style>
+  <script src="../sha512.min.js"></script>
+  <script>
+      sessionStorage.getItem("connexion")==k?a=true:window.location.href="../connexion.html?d=html-editor&f=index";
+  </script>
+</head>
+<body>
+
+
+<div id="maindiv" style="border:1px solid #bbb;position: relative; width: 1010px; height: 600px;margin: auto;">
+    <div id="section1" style="position: relative; width: 100%; height: 50%;">
+        <div id="htmldiv" style="position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
+            <div style="position: relative; text-align: center; background-color: #444449;color:#999;">HTML</div>
+            <div id="edit1" style="position: relative; width: 100%; height: 100%;">
+                <pre id="editor1" style="position: relative; width: 100%; height: 100%;margin: 0px;padding: 0px;"></pre>
+            </div>
+        </div>
+        <div id="splitter1" style="top:50px;width: 10px;height: 40px;background-color: #555559;border-radius: 5px;float: left;position: relative;left: -5px;z-index: 10;cursor: col-resize;"></div>
+        <div id="cssdiv" style="left:-10px;position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
+            <div style="text-align: center; background-color: #55555a;color:#aaa; width: calc(100% + 10px);">CSS</div>
+            <div id="edit2" style="position: relative; width: calc(100% + 10px); height: 100%;">
+                <pre id="editor2" style="position: relative; width: 100%; height: 100%;margin: 0px;padding: 0px;"></pre>
+            </div>
+        </div>
+    </div>
+    <div id="section2" style="position: relative; width: 100%; height: 50%;">
+        <div id="output" style="position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
+            <div id="divider1" style="text-align: center; background-color: #55555a;color:#aaa;cursor: row-resize;">Output</div>
+            <div id="inneroutput" style="overflow: hidden; position: relative; width: 100%; height: 100%;">
+                <iframe frameborder="0" id="iframe" style="width: 100%; height: 100%;background-color: #eee;"></iframe>
+                <div id="masq"  style="display: none; opacity: 0; background-color: red; width: 100%; height: 100%;position: relative; top: calc(-100% - 5px);"></div>
+            </div>
+        </div>
+        <div id="splitter2" style="top:50px;width: 10px;height: 40px;background-color: #666669;border-radius: 5px;float: left;position: relative;left: -5px;z-index: 10;cursor: col-resize;"></div>
+        <div id="jsdiv" style="left:-10px;position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
+            <div id="divider2" style="text-align: center; background-color: #444449;color:#999; width: calc(100% + 10px); cursor: row-resize;">JavaScript</div>
+            <div id="edit3" style="position: relative; width: calc(100% + 10px); height: 100%;">
+                <pre id="editor3" style="position: relative; width: 100%; height: 100%;margin: 0px;padding: 0px;"></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // id
+    var maindiv = document.getElementById('maindiv');
+    var section1 = document.getElementById('section1');
+    var section2 = document.getElementById('section2');
+    var htmldiv = document.getElementById('htmldiv');
+    var cssdiv = document.getElementById('cssdiv');
+    var output = document.getElementById('output');
+    var jsdiv = document.getElementById('jsdiv');
+    var edit1 = document.getElementById('edit1');
+    var edit2 = document.getElementById('edit2');
+    var edit3 = document.getElementById('edit3');
+    var editor1 = document.getElementById('editor1');
+    var editor2 = document.getElementById('editor2');
+    var editor3 = document.getElementById('editor3');
+    var inneroutput = document.getElementById('inneroutput');
+    var splitter1 = document.getElementById('splitter1');
+    var splitter2 = document.getElementById('splitter2');
+    var divider1 = document.getElementById('divider1');
+    var divider2 = document.getElementById('divider2');
+    var masq = document.getElementById('masq');
+    
+    // paramètres
+    var totalwidth = 1010;           // htmldiv.width + splitter.width + cssdiv.width (500 + 10 + 500)
+    var totalheight = 650;           // section1.height + section2.height
+    var minwidth = 150;              // htmldiv ou cssdiv ou output ou jsdiv
+    var minheight = 80;              // section1 ou section2 ou htmldiv  ou cssdiv ou output ou jsdiv
+    var maintop = 0;                 // position x
+    var mainleft = 0;                // position y
+    var defaulthtmlwidth = 70;       // largeur par défaut de htmldiv (%)
+    var defaultoutputwidth = 65;     // largeur par défaut de output (%)
+    var showcss = true;              // afficher css ?
+    var showjs = true;               // afficher javascript ?
+    var fontsize = '14px';           // taille du texte
+    var readonly1 = false;           // editeurs html en lecture seul
+    var readonly2 = false;           // editeurs css en lecture seul
+    var readonly3 = false;           // editeurs javascript en lecture seul
+    var code1 = '';                  // code html initiale
+    var code2 = '';                  // code css initiale
+    var code3 = '';                  // code javascript initiale
+    var basicAutocompletion = true;  // autocomplétion basique
+    var snippets = true;             // snippets
+    var liveAutocompletion = true;   // autocomplétion live
+    
+    // évènnements
+    var dragging1 = false;
+    var dragging2 = false;
+    var dragging3 = false;
+
+    // corrigé de bug !!!! essayer de le commenter et voir le résultat.
+    var iframedocument = document.getElementById("iframe").contentWindow.document;
+    iframedocument.open();
+    iframedocument.write('<html><head></head><body></body></html>');
+    iframedocument.close();
+
+    window.onload = function(){
+
+        splitter1.onmousedown = start1;
+        splitter2.onmousedown = start2;
+        divider1.onmousedown = start3;
+        divider2.onmousedown = start3;
+        document.onmouseup = stop;
+        document.onmousemove = drag;
+
+        maindiv.style.top = maintop + 'px';
+        maindiv.style.left = mainleft + 'px';
+        maindiv.style.width = totalwidth+'px';
+        maindiv.style.height = totalheight+'px';
+        section1.style.height = totalheight/2 + 'px';
+        section2.style.height = totalheight/2 + 'px';
+        htmldiv.style.height = section1.offsetHeight+'px';
+        output.style.height = section2.offsetHeight+'px';
+        edit1.style.height = htmldiv.offsetHeight - 19 + 'px';
+        editor1.style.height = htmldiv.offsetHeight - 19 + 'px';
+        inneroutput.style.height = output.offsetHeight - 19 + 'px';
+        jsdiv.style.height = section2.offsetHeight - 19 + 'px';
+        edit3.style.height = jsdiv.offsetHeight + 'px';
+        editor3.style.height = edit3.offsetHeight + 'px';
+
+        editor1.style.fontSize = fontsize;
+        editor2.style.fontSize = fontsize;
+        editor3.style.fontSize = fontsize;
+
+        
+
+        if(!showcss){
+            cssdiv.style.display = 'none';
+            splitter1.style.display = 'none';
+            htmldiv.style.width = '100%';
+        }
+        else{
+            htmldiv.style.width = defaulthtmlwidth*totalwidth/100 - 5 + 'px';
+            cssdiv.style.width = section1.offsetWidth - htmldiv.offsetWidth - 10 +'px';
+            cssdiv.style.height = section1.offsetHeight-19+'px';
+            splitter1.style.top = section1.offsetHeight/2 - splitter1.offsetHeight/2 + 'px';
+        }
+
+        if(!showjs){
+            jsdiv.style.display = 'none';
+            splitter2.style.display = 'none';
+            output.style.width = '100%';
+        }
+        else{
+            output.style.width = defaultoutputwidth*totalwidth/100 - 5+'px';
+            jsdiv.style.width = section2.offsetWidth - output.offsetWidth - 10 +'px';
+            jsdiv.style.height = section2.offsetHeight-19+'px';
+            splitter2.style.top = section2.offsetHeight/2 - splitter2.offsetHeight/2 + 'px';
+        }
+
+        
+    }
+
+    function start1(e){
+        dragging1 = true;
+        masq.style.display = 'block';
+    }
+
+    function start2(e){
+        dragging2 = true;
+        masq.style.display = 'block';
+    }
+
+    function start3(e){
+        dragging3 = true;
+        masq.style.display = 'block';
+    }
+
+    function stop(e){
+        dragging1 = false;
+        dragging2 = false;
+        dragging3 = false;
+        masq.style.display = 'none';
+    }
+
+    function drag(e){
+                xmouse = e.clientX;
+                ymouse = e.clientY;
+
+                if(xmouse<maindiv.offsetLeft+minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft))
+                    xmouse=maindiv.offsetLeft+minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft);
+                if(xmouse>maindiv.offsetLeft-2+maindiv.offsetWidth-splitter1.offsetWidth-minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft))
+                    xmouse=maindiv.offsetLeft-2+maindiv.offsetWidth-splitter1.offsetWidth-minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft);
+                
+                if(ymouse<maindiv.offsetTop+minheight+11-(document.body.scrollTop || document.documentElement.scrollTop))
+                    ymouse = maindiv.offsetTop+minheight+11-(document.body.scrollTop || document.documentElement.scrollTop);
+                if(ymouse>maindiv.offsetTop-2+11+maindiv.offsetHeight-minheight-(document.body.scrollTop || document.documentElement.scrollTop))
+                    ymouse = maindiv.offsetTop-2+11+maindiv.offsetHeight-minheight-(document.body.scrollTop || document.documentElement.scrollTop);
+
+                if(dragging1){
+                    htmldiv.style.width = xmouse-maindiv.offsetLeft+(document.body.scrollLeft || document.documentElement.scrollLeft)+'px';
+                    cssdiv.style.width = maindiv.offsetWidth -2- htmldiv.offsetWidth - splitter1.offsetWidth +'px';
+                }
+                else if(dragging2){
+                    output.style.width = xmouse-maindiv.offsetLeft+(document.body.scrollLeft || document.documentElement.scrollLeft)+'px';
+                    jsdiv.style.width = maindiv.offsetWidth -2- output.offsetWidth - splitter2.offsetWidth +'px';
+                }
+                else if(dragging3){
+                    section1.style.height = ymouse-maindiv.offsetTop-11+(document.body.scrollTop || document.documentElement.scrollTop)+'px';
+                    section2.style.height = maindiv.offsetHeight -2- section1.offsetHeight +'px';
+                    htmldiv.style.height = section1.offsetHeight + 'px';
+                    cssdiv.style.height = section1.offsetHeight + 'px';
+                    output.style.height = section2.offsetHeight + 'px';
+                    jsdiv.style.height = section2.offsetHeight + 'px';
+                    splitter1.style.top = section1.offsetHeight/2 - splitter1.offsetHeight/2 + 'px'
+                    splitter2.style.top = section2.offsetHeight/2 - splitter2.offsetHeight/2 + 'px'
+                    edit1.style.height = htmldiv.offsetHeight - 19 + 'px';
+                    editor1.style.height = htmldiv.offsetHeight - 19 + 'px';
+                    edit2.style.height = cssdiv.offsetHeight - 19 + 'px';
+                    editor2.style.height = cssdiv.offsetHeight - 19 + 'px';
+                    edit3.style.height = jsdiv.offsetHeight - 19 + 'px';
+                    editor3.style.height = jsdiv.offsetHeight - 19 + 'px';
+                    inneroutput.style.height = output.offsetHeight - 19 + 'px';
+                }
+                ace1.resize();
+                ace2.resize();
+                ace3.resize();
+            }
+</script>
+
+
+
+<!-- load ace -->
+<script src="ace-builds-master/src-noconflict/ace.js"></script>
+<!-- load ace language tools -->
+<script src="ace-builds-master/src-noconflict/ext-language_tools.js"></script>
+<script>
+    // trigger extension
+    ace.require("ace-builds-master/src-noconflict/language_tools");
+    var ace1 = ace.edit("editor1");
+    ace1.session.setMode("ace/mode/html");
+    ace1.setTheme("ace/theme/mytheme");    // 'mytheme' or 'chrome' or 'clouds_midnight' or 'eclipse' or 'xcode'
+    ace1.setReadOnly(readonly1);
+    ace1.setValue(code1);
+    // enable autocompletion and snippets
+    ace1.setOptions({
+        enableBasicAutocompletion: basicAutocompletion,
+        enableSnippets: snippets,
+        enableLiveAutocompletion: liveAutocompletion
+    });
+
+    var ace2 = ace.edit("editor2");
+    ace2.session.setMode("ace/mode/css");
+    ace2.setTheme("ace/theme/mytheme");    // rechercher plus de theme sur internet
+    ace2.setReadOnly(readonly2);
+    ace2.setValue(code2);
+    // enable autocompletion and snippets
+    ace2.setOptions({
+        enableBasicAutocompletion: basicAutocompletion,
+        enableSnippets: snippets,
+        enableLiveAutocompletion: liveAutocompletion
+    });
+
+    var ace3 = ace.edit("editor3");
+    ace3.session.setMode("ace/mode/javascript");
+    ace3.setTheme("ace/theme/mytheme");
+    ace3.setReadOnly(readonly3);
+    ace3.setValue(code3);
+    // enable autocompletion and snippets
+    ace3.setOptions({
+        enableBasicAutocompletion: basicAutocompletion,
+        enableSnippets: snippets,
+        enableLiveAutocompletion: liveAutocompletion
+    });
+
+    ace1.session.on('change', function(delta) {
+        update();
+    });
+
+    ace2.session.on('change', function(delta) {
+        update();
+    });
+
+    ace3.session.on('change', function(delta) {
+        update();
+    });
+
+    update = function(){
+        document.getElementById('inneroutput').innerHTML = '<iframe frameborder="0" id="iframe" style="width: 100%; height: 100%;background-color: #eee;"></iframe>\
+                <div id="masq"  style="display: none; opacity: 0; background-color: red; width: 100%; height: 100%;position: relative; top: calc(-100% - 5px);"></div>';
+        masq = document.getElementById('masq');
+
+        var iframedocument = document.getElementById("iframe").contentWindow.document;
+        iframedocument.open();
+        iframedocument.write(ace1.getValue());
+        iframedocument.close();
+        
+        document.title = iframedocument.title;
+        
+        let headElms = iframedocument.getElementsByTagName('head');
+        var tagstyle = iframedocument.createElement('style');
+        var textcss = ace2.getValue();
+        var codecss = iframedocument.createTextNode(textcss);
+        tagstyle.appendChild(codecss);
+        if(headElms[0])
+            headElms[0].appendChild(tagstyle);
+        
+
+        let bodyElms = iframedocument.getElementsByTagName('body');
+        var tagscript = iframedocument.createElement('script');
+        var textscript = ace3.getValue();
+        var codescript = iframedocument.createTextNode(textscript);
+        tagscript.appendChild(codescript);
+        if(bodyElms[0])
+        bodyElms[0].appendChild(tagscript);
+    }
+</script>
+
+<!--script src="ace-builds-master/demo/show_own_source.js"></script-->
+</body>
+</html>

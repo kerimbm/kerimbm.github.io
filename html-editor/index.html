@@ -4,9 +4,31 @@
   <meta charset="UTF-8">
   <title>HTML Editor</title>
   <style type="text/css" media="screen">
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    #intro{
+        font-size: 14px;
+        height: 20px;
+        line-height: 20px;
+        color: rgb(255, 203, 255);
+        background-color: rgb(141, 3, 107);
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
     #maindiv, #maindiv::after, #maindiv::before {
+        -moz-user-select: none;
         -webkit-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+
         -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+
         -webkit-app-region: no-drag;
         cursor: default;
     }
@@ -18,38 +40,37 @@
 </head>
 <body>
 
-
-<div id="maindiv" style="border:1px solid #bbb;position: relative; width: 1010px; height: 600px;margin: auto;">
-    <div id="section1" style="position: relative; width: 100%; height: 50%;">
-        <div id="htmldiv" style="position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
-            <div style="position: relative; text-align: center; background-color: #444449;color:#999;">HTML</div>
-            <div id="edit1" style="position: relative; width: 100%; height: 100%;">
+<div id="intro">Un éditeur de code HTML/CSS/JAVASCRIPT en temps réel créé par kerimbm</div>
+<div id="maindiv" style="position: relative; width: 100vw; height: calc(100vh - 20px);margin: auto;">
+    <div id="section1" style="position: relative; width: 40%; height: 100%; float: left;">
+        <div id="htmldiv" style="position: relative; width: 100%; height: 60%;">
+            <div style="position: relative; text-align: center; background-color: #444449;color:#aaa;border-bottom: 1px solid #333;">HTML</div>
+            <div id="edit1" style="position: relative; width: 100%; height: calc(100% - 19px);">
                 <pre id="editor1" style="position: relative; width: 100%; height: 100%;margin: 0px;padding: 0px;"></pre>
             </div>
         </div>
-        <div id="splitter1" style="top:50px;width: 10px;height: 40px;background-color: #555559;border-radius: 5px;float: left;position: relative;left: -5px;z-index: 10;cursor: col-resize;"></div>
-        <div id="cssdiv" style="left:-10px;position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
-            <div style="text-align: center; background-color: #55555a;color:#aaa; width: calc(100% + 10px);">CSS</div>
-            <div id="edit2" style="position: relative; width: calc(100% + 10px); height: 100%;">
+        <div id="cssdiv" style="position: relative; width: 100%; height: 20%;">
+            <div id="divider1" style="text-align: center; background-color: #444449;color:#aaa; width: 100%; cursor: row-resize;border-bottom: 1px solid #333;">CSS</div>
+            <div id="edit2" style="position: relative; width: 100%; height: calc(100% - 19px);">
                 <pre id="editor2" style="position: relative; width: 100%; height: 100%;margin: 0px;padding: 0px;"></pre>
             </div>
         </div>
-    </div>
-    <div id="section2" style="position: relative; width: 100%; height: 50%;">
-        <div id="output" style="position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
-            <div id="divider1" style="text-align: center; background-color: #55555a;color:#aaa;cursor: row-resize;">Output</div>
-            <div id="inneroutput" style="overflow: hidden; position: relative; width: 100%; height: 100%;">
-                <iframe frameborder="0" id="iframe" style="width: 100%; height: 100%;background-color: #eee;"></iframe>
-                <div id="masq"  style="display: none; opacity: 0; background-color: red; width: 100%; height: 100%;position: relative; top: calc(-100% - 5px);"></div>
-            </div>
-        </div>
-        <div id="splitter2" style="top:50px;width: 10px;height: 40px;background-color: #666669;border-radius: 5px;float: left;position: relative;left: -5px;z-index: 10;cursor: col-resize;"></div>
-        <div id="jsdiv" style="left:-10px;position: relative; width: calc(50% - 5px); height: calc(100% - 19px);float: left;">
-            <div id="divider2" style="text-align: center; background-color: #444449;color:#999; width: calc(100% + 10px); cursor: row-resize;">JavaScript</div>
-            <div id="edit3" style="position: relative; width: calc(100% + 10px); height: 100%;">
+        <div id="jsdiv" style="position: relative; width: 100%; height: 20%;">
+            <div id="divider2" style="text-align: center; background-color: #444449;color:#aaa; width: 100%; cursor: row-resize;">JavaScript</div>
+            <div id="edit3" style="position: relative; width: 100%; height: calc(100% - 19px);">
                 <pre id="editor3" style="position: relative; width: 100%; height: 100%;margin: 0px;padding: 0px;"></pre>
             </div>
         </div>
+    </div>
+    <div id="splitter" style="top:calc(50% - 50px);left: calc(40% - 5px);width: 10px;height: 40px;background-color: #555559;border-radius: 5px;float: left;position: absolute;z-index: 10;cursor: col-resize;"></div>
+    <div id="section2" style="position: relative; width: 60%; height: 100%; float: left;">
+        <div id="output" style="position: relative; width: 100%; height: 100%;">
+            <div id="inneroutput" style="overflow: hidden; position: relative; width: 100%; height: 100%;">
+                <iframe frameborder="0" id="iframe" style="width: 100%; height: 100%;background-color: #eee;"></iframe>
+                <div id="mask"  style="display: none; opacity: 0; background-color: red; width: 100%; height: 100%;position: relative; top: calc(-100% - 5px);"></div>
+            </div>
+        </div>
+        
     </div>
 </div>
 
@@ -70,23 +91,20 @@
     var editor2 = document.getElementById('editor2');
     var editor3 = document.getElementById('editor3');
     var inneroutput = document.getElementById('inneroutput');
-    var splitter1 = document.getElementById('splitter1');
-    var splitter2 = document.getElementById('splitter2');
+    var splitter = document.getElementById('splitter');
     var divider1 = document.getElementById('divider1');
     var divider2 = document.getElementById('divider2');
-    var masq = document.getElementById('masq');
+    var mask = document.getElementById('mask');
     
     // paramètres
-    var totalwidth = 1010;           // htmldiv.width + splitter.width + cssdiv.width (500 + 10 + 500)
-    var totalheight = 650;           // section1.height + section2.height
+    var totalwidth = document.documentElement.clientWidth;           // htmldiv.width + splitter.width + cssdiv.width (500 + 10 + 500)
+    var totalheight = document.documentElement.clientHeight;           // section1.height + section2.height
     var minwidth = 150;              // htmldiv ou cssdiv ou output ou jsdiv
-    var minheight = 80;              // section1 ou section2 ou htmldiv  ou cssdiv ou output ou jsdiv
+    var minheight = 20;              // section1 ou section2 ou htmldiv  ou cssdiv ou output ou jsdiv
     var maintop = 0;                 // position x
     var mainleft = 0;                // position y
-    var defaulthtmlwidth = 70;       // largeur par défaut de htmldiv (%)
-    var defaultoutputwidth = 65;     // largeur par défaut de output (%)
-    var showcss = true;              // afficher css ?
-    var showjs = true;               // afficher javascript ?
+    var defaulthtmlwidth = 50;       // largeur par défaut de htmldiv (%)
+    var defaultoutputwidth = 50;     // largeur par défaut de output (%)
     var fontsize = '14px';           // taille du texte
     var readonly1 = false;           // editeurs html en lecture seul
     var readonly2 = false;           // editeurs css en lecture seul
@@ -111,121 +129,91 @@
 
     window.onload = function(){
 
-        splitter1.onmousedown = start1;
-        splitter2.onmousedown = start2;
-        divider1.onmousedown = start3;
+        splitter.onmousedown = start1;
+        divider1.onmousedown = start2;
         divider2.onmousedown = start3;
         document.onmouseup = stop;
         document.onmousemove = drag;
 
-        maindiv.style.top = maintop + 'px';
+        /*maindiv.style.top = maintop + 'px';
         maindiv.style.left = mainleft + 'px';
         maindiv.style.width = totalwidth+'px';
         maindiv.style.height = totalheight+'px';
-        section1.style.height = totalheight/2 + 'px';
-        section2.style.height = totalheight/2 + 'px';
-        htmldiv.style.height = section1.offsetHeight+'px';
-        output.style.height = section2.offsetHeight+'px';
+        section1.style.height = totalheight + 'px';
+        section2.style.height = totalheight + 'px';
         edit1.style.height = htmldiv.offsetHeight - 19 + 'px';
         editor1.style.height = htmldiv.offsetHeight - 19 + 'px';
         inneroutput.style.height = output.offsetHeight - 19 + 'px';
         jsdiv.style.height = section2.offsetHeight - 19 + 'px';
         edit3.style.height = jsdiv.offsetHeight + 'px';
         editor3.style.height = edit3.offsetHeight + 'px';
-
+*/
         editor1.style.fontSize = fontsize;
         editor2.style.fontSize = fontsize;
         editor3.style.fontSize = fontsize;
 
         
 
-        if(!showcss){
-            cssdiv.style.display = 'none';
-            splitter1.style.display = 'none';
-            htmldiv.style.width = '100%';
-        }
-        else{
-            htmldiv.style.width = defaulthtmlwidth*totalwidth/100 - 5 + 'px';
-            cssdiv.style.width = section1.offsetWidth - htmldiv.offsetWidth - 10 +'px';
-            cssdiv.style.height = section1.offsetHeight-19+'px';
-            splitter1.style.top = section1.offsetHeight/2 - splitter1.offsetHeight/2 + 'px';
-        }
-
-        if(!showjs){
-            jsdiv.style.display = 'none';
-            splitter2.style.display = 'none';
-            output.style.width = '100%';
-        }
-        else{
-            output.style.width = defaultoutputwidth*totalwidth/100 - 5+'px';
-            jsdiv.style.width = section2.offsetWidth - output.offsetWidth - 10 +'px';
-            jsdiv.style.height = section2.offsetHeight-19+'px';
-            splitter2.style.top = section2.offsetHeight/2 - splitter2.offsetHeight/2 + 'px';
-        }
-
+        
         
     }
 
     function start1(e){
         dragging1 = true;
-        masq.style.display = 'block';
+        mask.style.display = 'block';
     }
 
     function start2(e){
         dragging2 = true;
-        masq.style.display = 'block';
+        mask.style.display = 'block';
     }
 
     function start3(e){
         dragging3 = true;
-        masq.style.display = 'block';
+        mask.style.display = 'block';
     }
 
     function stop(e){
         dragging1 = false;
         dragging2 = false;
         dragging3 = false;
-        masq.style.display = 'none';
+        mask.style.display = 'none';
     }
 
     function drag(e){
+
                 xmouse = e.clientX;
                 ymouse = e.clientY;
 
-                if(xmouse<maindiv.offsetLeft+minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft))
+                if(dragging1 && xmouse<maindiv.offsetLeft+minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft))
                     xmouse=maindiv.offsetLeft+minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft);
-                if(xmouse>maindiv.offsetLeft-2+maindiv.offsetWidth-splitter1.offsetWidth-minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft))
-                    xmouse=maindiv.offsetLeft-2+maindiv.offsetWidth-splitter1.offsetWidth-minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft);
+                else if(dragging1 && xmouse>maindiv.offsetLeft-2+maindiv.offsetWidth-splitter.offsetWidth-minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft))
+                    xmouse=maindiv.offsetLeft-2+maindiv.offsetWidth-splitter.offsetWidth-minwidth-(document.body.scrollLeft || document.documentElement.scrollLeft);
                 
-                if(ymouse<maindiv.offsetTop+minheight+11-(document.body.scrollTop || document.documentElement.scrollTop))
-                    ymouse = maindiv.offsetTop+minheight+11-(document.body.scrollTop || document.documentElement.scrollTop);
-                if(ymouse>maindiv.offsetTop-2+11+maindiv.offsetHeight-minheight-(document.body.scrollTop || document.documentElement.scrollTop))
-                    ymouse = maindiv.offsetTop-2+11+maindiv.offsetHeight-minheight-(document.body.scrollTop || document.documentElement.scrollTop);
+                else if(dragging2 && ymouse<maindiv.offsetTop+minheight+9-(document.body.scrollTop || document.documentElement.scrollTop))
+                    ymouse = maindiv.offsetTop+minheight+9-(document.body.scrollTop || document.documentElement.scrollTop);
+                else if(dragging2 && ymouse>maindiv.offsetTop + htmldiv.offsetHeight + cssdiv.offsetHeight + 9 - minheight - (document.body.scrollTop || document.documentElement.scrollTop))
+                    ymouse = maindiv.offsetTop + htmldiv.offsetHeight + cssdiv.offsetHeight + 9 - minheight - (document.body.scrollTop || document.documentElement.scrollTop);
+                
+                else if(dragging3 && ymouse<maindiv.offsetTop+htmldiv.offsetHeight+minheight+9-(document.body.scrollTop || document.documentElement.scrollTop))
+                    ymouse = maindiv.offsetTop+htmldiv.offsetHeight+minheight+9-(document.body.scrollTop || document.documentElement.scrollTop);
+                else if(dragging3 && ymouse>maindiv.offsetTop + maindiv.offsetHeight + 9 - minheight - (document.body.scrollTop || document.documentElement.scrollTop))
+                    ymouse = maindiv.offsetTop + maindiv.offsetHeight + 9 - minheight - (document.body.scrollTop || document.documentElement.scrollTop);
 
-                if(dragging1){
-                    htmldiv.style.width = xmouse-maindiv.offsetLeft+(document.body.scrollLeft || document.documentElement.scrollLeft)+'px';
-                    cssdiv.style.width = maindiv.offsetWidth -2- htmldiv.offsetWidth - splitter1.offsetWidth +'px';
+                
+                if(dragging1){//splitter
+                    section1.style.width = xmouse-maindiv.offsetLeft+(document.body.scrollLeft || document.documentElement.scrollLeft)+'px';
+                    section2.style.width = maindiv.offsetWidth - htmldiv.offsetWidth /*- splitter.offsetWidth*/ +'px';
+                    splitter.style.left = xmouse-maindiv.offsetLeft+(document.body.scrollLeft || document.documentElement.scrollLeft)-5+'px';
                 }
-                else if(dragging2){
-                    output.style.width = xmouse-maindiv.offsetLeft+(document.body.scrollLeft || document.documentElement.scrollLeft)+'px';
-                    jsdiv.style.width = maindiv.offsetWidth -2- output.offsetWidth - splitter2.offsetWidth +'px';
+                else if(dragging2){//divider1
+                    htmldiv.style.height = ymouse-maindiv.offsetTop-9+(document.body.scrollTop || document.documentElement.scrollTop)+'px';
+                    cssdiv.style.height = maindiv.offsetHeight - htmldiv.offsetHeight - jsdiv.offsetHeight  + 'px';
+
                 }
-                else if(dragging3){
-                    section1.style.height = ymouse-maindiv.offsetTop-11+(document.body.scrollTop || document.documentElement.scrollTop)+'px';
-                    section2.style.height = maindiv.offsetHeight -2- section1.offsetHeight +'px';
-                    htmldiv.style.height = section1.offsetHeight + 'px';
-                    cssdiv.style.height = section1.offsetHeight + 'px';
-                    output.style.height = section2.offsetHeight + 'px';
-                    jsdiv.style.height = section2.offsetHeight + 'px';
-                    splitter1.style.top = section1.offsetHeight/2 - splitter1.offsetHeight/2 + 'px'
-                    splitter2.style.top = section2.offsetHeight/2 - splitter2.offsetHeight/2 + 'px'
-                    edit1.style.height = htmldiv.offsetHeight - 19 + 'px';
-                    editor1.style.height = htmldiv.offsetHeight - 19 + 'px';
-                    edit2.style.height = cssdiv.offsetHeight - 19 + 'px';
-                    editor2.style.height = cssdiv.offsetHeight - 19 + 'px';
-                    edit3.style.height = jsdiv.offsetHeight - 19 + 'px';
-                    editor3.style.height = jsdiv.offsetHeight - 19 + 'px';
-                    inneroutput.style.height = output.offsetHeight - 19 + 'px';
+                else if(dragging3){//divider2
+                    cssdiv.style.height = ymouse-maindiv.offsetTop-htmldiv.offsetHeight-9+(document.body.scrollTop || document.documentElement.scrollTop)+'px';
+                    jsdiv.style.height = maindiv.offsetHeight - htmldiv.offsetHeight - cssdiv.offsetHeight  + 'px';
                 }
                 ace1.resize();
                 ace2.resize();
@@ -291,9 +279,9 @@
     });
 
     update = function(){
-        document.getElementById('inneroutput').innerHTML = '<iframe frameborder="0" id="iframe" style="width: 100%; height: 100%;background-color: #eee;"></iframe>\
-                <div id="masq"  style="display: none; opacity: 0; background-color: red; width: 100%; height: 100%;position: relative; top: calc(-100% - 5px);"></div>';
-        masq = document.getElementById('masq');
+        // document.getElementById('inneroutput').innerHTML = '<iframe frameborder="0" id="iframe" style="width: 100%; height: 100%;background-color: #eee;"></iframe>\
+        //         <div id="mask  style="display: none; opacity: 0; background-color: red; width: 100%; height: 100%;position: relative; top: calc(-100% - 5px);"></div>';
+        mask = document.getElementById('mask');
 
         var iframedocument = document.getElementById("iframe").contentWindow.document;
         iframedocument.open();
