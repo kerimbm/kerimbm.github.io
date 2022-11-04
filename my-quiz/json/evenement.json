@@ -1,0 +1,75 @@
+head = `{
+    "title": "Les événements",
+    "subTitle": "evenement",
+    "author": "kerimbm",
+    "date": "04/11/2022",
+    "description": "Section : Les événements",
+    "norepeat": false,
+    "quizid": 1667581403334
+}`;
+
+data = `[
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Dans quel élément HTML mettons-nous le JavaScript ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;script&#62;", "&#60;scripting&#62;", "&#60;js&#62;", "&#60;javascript&#62;"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Peut-on écrire du javascript dans un fichier séparé ?",
+        "code": "",
+        "lang": "python",
+        "options": ["Oui", "Non"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Le fichier JavaScript externe doit contenir la balise &#60;script&#62;.",
+        "code": "",
+        "lang": "python",
+        "options": ["Faux", "Vrai"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Comment écrivez-vous \\"Bonjour\\" dans une boîte d'alerte en JavaScript ?",
+        "code": "",
+        "lang": "python",
+        "options": ["alert(\\"Bonjour\\");", "msgbox(\\"Bonjour\\");", "echo(\\"Bonjour\\");", "alertbox(\\"Bonjour\\");"]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 30,
+        "question": "Comment écrire l'instruction IF pour exécuter du code JavaScript si la variable masse n'est PAS égal à 5 ?",
+        "code": "",
+        "lang": "python",
+        "options": ["if (masse != 5) { // Code }", "if masse != 5 then // Code", "if masse &#60;&#62; 5 : # Code", "if (masse != 5) then # Code end;"]
+    },
+    {
+        "type": "drag",
+        "points": 3,
+        "temps": 40,
+        "question": "Chercher La définition de chaque événement :",
+        "code": "",
+        "lang": "python",
+        "options": [["onclick", "Lorsqu'on clique sur un élément html"], ["onmouseover", "Lors du survole de la souris sur l'élément html"], ["onmouseout", "Lorsque la souris quitte l'élément html"], ["onblur", "Si le champ perd le focus"], ["onfocus", "Lorsque le champ obtient le focus"]]
+    },
+    {
+        "type": "one",
+        "points": 3,
+        "temps": 20,
+        "question": "Le JavaScript est un langage interprété ... :",
+        "code": "",
+        "lang": "python",
+        "options": ["Par le navigateur", "Par le serveur", "Par le modem", "Par ms word"]
+    }
+]`;

@@ -1,0 +1,102 @@
+head = `{
+    "title": "Les formulaires",
+    "subTitle": "formulaire",
+    "author": "kerimbm",
+    "date": "04/11/2022",
+    "description": "Section : Les formulaires",
+    "norepeat": false,
+    "quizid": 1667568119645
+}`;
+
+data = `[
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Quel est le code HTML correcte et recommandé pour créer une case à cocher ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;input type=\\"checkbox\\" name=\\"nom\\"&#62;", "&#60;input type=\\"checkbox\\"&#62;", "&#60;checkbox&#62;", "&#60;input checkbox name=nom&#62;"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Quel est le code HTML correct et recommandé pour créer un champ de saisie de texte ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;input type=\\"text\\" name=\\"nom\\"&#62;", "&#60;textfield&#62;", "&#60;input type=\\"text\\"&#62;", "&#60;textinput name=\\"nom\\"&#62;", "&#60;input type=\\"textfield\\"&#62;"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 40,
+        "question": "Le code html suivant permet de créer une liste déroulante.<br>Quelles sont les lignes contenants des erreurs ?",
+        "code": "&#60;input type=\\"select\\"&#62;\\n&#60;option&#62;Première option&#60;/option&#62;\\n&#60;option&#62;Deuxième &#60;!-- ok --&#62; option&#60;/option&#62;\\n&#60;/input&#62;",
+        "lang": "python",
+        "options": [["&#60;input type=\\"select\\"&#62;", true], ["&#60;option&#62;Première option&#60;/option&#62;", false], ["&#60;option&#62;Deuxième &#60;!-- ok --&#62; option&#60;/option&#62;", false], ["&#60;/input&#62;", true]]
+    },
+    {
+        "type": "drag",
+        "points": 2,
+        "temps": 40,
+        "question": "Relier chaque élément à gauche avec sa définition :",
+        "code": "",
+        "lang": "python",
+        "options": [["&#60;form&#62;", "Formulaire déstiné à être envoyer au serveur"], ["method", "La méthode d'envoie GET ou POST"], ["action", "Le programme qui traitera les données envoyées par le formulaire"], ["&#60;input type=\\"submit\\"&#62;", "Un bouton d'envoie des données du formulaire"]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Quel est la balise correcte permettant de créer une zone de texte sur plusieurs lignes ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;textarea&#62;", "&#60;input type=\\"textbox\\"&#62;", "&#60;input type=\\"textarea\\"&#62;", "&#60;input textarea&#62;"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 40,
+        "question": "Quelles sont les erreurs dans ce code ?",
+        "code": "&#60;input type=\\"radio\\"; name=\\"option_1\\"; value=\\"val_1\\"&#62;\\n&#60;input type=\\"radio\\"; name=\\"option_2\\"; value=\\"val_2\\"&#62;\\n&#60;input type=\\"radio\\"; name=\\"option_3\\"; value=\\"val_3\\"&#62;\\n&#60;input type=\\"radio\\"; name=\\"option_4\\"; value=\\"val_4\\"&#62;",
+        "lang": "python",
+        "options": [["Les boutons devront former un groupe mais ils n'ont pas le même nom", true], ["Les points-virgules entre les attributs", true], ["Les boutons radio n'ont pas la même valeur", false], ["Le type radio n'existe pas pour la balise input", false]]
+    },
+    {
+        "type": "sort",
+        "points": 2,
+        "temps": 40,
+        "question": "Ordonner les lignes suivantes pour obtenir un formulaire correct :",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;form method=\\"post\\" action=\\"programme.php\\"&#62;", "&#60;select name=\\"formation\\"&#62;", "&#60;option value=\\"html\\"&#62; 1- HTML -1 &#60;/option&#62;", "&#60;option value=\\"css\\"&#62; 2- CSS -2 &#60;/option&#62;", "&#60;/select&#62;", "&#60;/form&#62;"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Si je demande un mot de passe dans mon formulaire, j'utiliserai plutôt...",
+        "code": "",
+        "lang": "python",
+        "options": ["La valeur post de l'attribut method", "La valeur get de l'attribut method", "Ne pas utiliser l'attribut method", "La valeur crypt de l'attribut method"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Lequel de ces attributs sert à pré-cocher une case ?",
+        "code": "",
+        "lang": "python",
+        "options": ["L'attribut checked", "L'attribut selected", "L'attribut autocomplete", "L'attribut value=\\"selected\\""]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "La méthode POST permet de sécuriser les données transférées lors de l'envoi d'un formulaire",
+        "code": "",
+        "lang": "python",
+        "options": ["Faux", "Vrai"]
+    }
+]`;

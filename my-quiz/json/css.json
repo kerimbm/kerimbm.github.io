@@ -1,0 +1,120 @@
+head = `{
+    "title": "Cascading Style Sheets (CSS)",
+    "subTitle": "css",
+    "author": "kerimbm",
+    "date": "04/11/2022",
+    "description": "Section : CSS",
+    "norepeat": false,
+    "quizid": 1667587715006
+}`;
+
+data = `[
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Que signifie CSS ?",
+        "code": "",
+        "lang": "python",
+        "options": ["Cascading Style Sheets", "Computer Style Sheets", "Colorful Style Sheets", "Creative Style Sheets"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Quel est le code HTML correct pour faire référence à une feuille de style externe ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;link rel=\\"stylesheet\\" href=\\"mystyle.css\\"&#62;", "&#60;stylesheet&#62;mystyle.css&#60;/stylesheet&#62;", "&#60;link src=\\"mystyle.css\\"&#62;", "&#60;link rel=\\"mystyle.css\\"&#62;"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Quelle balise HTML est utilisée pour définir une feuille de style interne ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;style&#62;", "&#60;css&#62;", "&#60;script&#62;", "&#60;meta&#62;"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Quel attribut est utilisé pour définir des styles dans l'élément html en cours ? ",
+        "code": "",
+        "lang": "python",
+        "options": ["style", "styles", "class", "font"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Le code suivant contient des erreurs, lesquelles ?",
+        "code": "h1 {\\n    color = red;\\n    font-size = 1.8em;\\n    text-align = center;\\n}",
+        "lang": "css",
+        "options": ["Le symbole \\"=\\" n'est pas un séparateur dans une déclaration CSS", "Le symbole \\"em\\" n'existe pas en CSS", "Le \\";\\" est obsolète en CSS3", "h1 n'est pas un sélecteur"]
+    },
+    {
+        "type": "drag",
+        "points": 2,
+        "temps": 40,
+        "question": "Relier chaque mot par sa définition :",
+        "code": "",
+        "lang": "python",
+        "options": [["Un sélecteur", "Permet de de sélectionner les éléments à mettre en forme"], ["Une déclaration", "C'est une règle simple comme color: red;"], ["Une propriété", "La façon dont on peut mettre en forme un élément"], ["Une valeur", "La mise en forme choisie parmi d'autres"]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 30,
+        "question": "Comment insérer un commentaire dans un fichier CSS ?",
+        "code": "",
+        "lang": "python",
+        "options": ["/* Un commentaire */", "# Un commentaire", "// Un commentaire", "{ Un commentaire }"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Quelle propriété est utilisée pour changer la couleur d'arrière-plan d'un élément html ?",
+        "code": "",
+        "lang": "python",
+        "options": ["background-color", "bg-color", "color", "colorbg"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 30,
+        "question": "Comment ajouter une couleur d'arrière-plan bleu pour tous les éléments &#60;h1&#62; ?",
+        "code": "",
+        "lang": "python",
+        "options": ["h1 { background-color : blue; }", "all.h1 { background-color : blue; }", "h1.all { background-color : blue; }", "#h1 { background-color : blue; }"]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Quelle propriété CSS est utilisée pour changer la couleur du texte d'un élément html ?",
+        "code": "",
+        "lang": "python",
+        "options": ["color", "text-color", "fgcolor", "foreground-color"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 20,
+        "question": "Quelle déclaration CSS permet de modifier la taille du texte ?",
+        "code": "",
+        "lang": "python",
+        "options": [["font-size : 20px;", true], ["font-style : 20px;", false], ["text-size : 1.5em;", false], ["font-size : 1.5em;", true]]
+    },
+    {
+        "type": "one",
+        "points": 2,
+        "temps": 20,
+        "question": "Quelle propriété est utilisée pour changer la police d'un élément ?",
+        "code": "",
+        "lang": "python",
+        "options": ["font-family", "font-weight", "font-style", "font-text"]
+    }
+]`;

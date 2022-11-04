@@ -1,0 +1,174 @@
+head = `{
+    "title": "Les balises de base d'une page html",
+    "subTitle": "html-base",
+    "author": "kerimbm",
+    "date": "04/11/2022",
+    "description": "Section : Les balises de base d'une page html",
+    "norepeat": false,
+    "quizid": 1667589937109
+}`;
+
+data = `[
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Que signifie HTML ?",
+        "code": "",
+        "lang": "python",
+        "options": ["Hyper Text Markup Language", "Hyperlinks and Text Markup Language", "Home Tool Markup Language", "Hyper Tag Markup Language"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Qui fait les standards du Web ?",
+        "code": "",
+        "lang": "python",
+        "options": ["The World Wide Web Consortium", "Mozilla", "Google", "Microsoft"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Choisissez le bon élément HTML pour le plus grand titre :",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;h1&#62;", "&#60;strong&#62;", "&#60;head&#62;", "&#60;h6&#62;"]
+    },
+    {
+        "type": "entry",
+        "points": 1,
+        "temps": 20,
+        "question": "Quel est l'élément HTML permet d'insérer un saut de ligne ?",
+        "code": "",
+        "lang": "python",
+        "options": [[1, "&#60;BR&#62;", "&#60;BR&#62;", "&#60;BR&#62;", "&#60;BR&#62;", "BR", "BR", "BR", "BR"]]
+    },
+    {
+        "type": "drag",
+        "points": 2,
+        "temps": 50,
+        "question": "Relier chaque balise par sa définition :",
+        "code": "",
+        "lang": "python",
+        "options": [["&#60;strong&#62;", "Définir un contenu de haute importance"], ["&#60;em&#62;", "Définir un contenu d’importance moyenne"], ["&#60;mark&#62;", "Est utilisée pour attirer l’attention sur certains contenu du document"], ["&#60;meta&#62;", "Permet de définir des information dans l'en-tête d'une page HTML"]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 30,
+        "question": "Quel est le code HTML permettant de créer un lien hypertexte ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;a href=\\"http://www.monsite.com\\"&#62;Mon site&#60;/a&#62;", "&#60;a&#62;http://www.monsite.com&#60;/a&#62;", "&#60;a url=\\"http://www.monsite.com\\"&#62;Mon site&#60;/a&#62;", "&#60;a name=\\"http://www.monsite.com\\"&#62;Mon site&#60;/a&#62;"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Lesquels de ces éléments permettent de créer un tableau ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;table&#62; &#60;tr&#62; &#60;td&#62;", "&#60;table&#62; &#60;tr&#62; &#60;tt&#62;", "&#60;table&#62; &#60;head&#62; &#60;tfoot&#62;", "&#60;thead&#62; &#60;body&#62; &#60;tr&#62;"]
+    },
+    {
+        "type": "sort",
+        "points": 1,
+        "temps": 20,
+        "question": "Ordonner les balises suivantes pour créer une liste ordonnée :",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;ol&#62;", "&#60;li&#62;Premier élément de la liste&#60;/li&#62;", "&#60;li&#62;Deuxième élément de la liste&#60;/li&#62;", "&#60;/ol&#62;"]
+    },
+    {
+        "type": "entry",
+        "points": 1,
+        "temps": 20,
+        "question": "Quelle balise permet de créer une liste à puces ?",
+        "code": "",
+        "lang": "python",
+        "options": [[1, "&#60;UL&#62;", "&#60;UL&#62;", "&#60;UL&#62;", "&#60;UL&#62;", "UL", "UL", "UL", "UL"]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Le code suivant permet d'insérer un commentaire :",
+        "code": "&#60;!-- Un commentaire en HTML --&#62;",
+        "lang": "html",
+        "options": ["Vrai", "Faux"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 20,
+        "question": "Quel élément HTML définit le titre d'un document ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;title&#62;", "&#60;meta&#62;", "&#60;head&#62;", "&#60;h1&#62;"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 30,
+        "question": "Quel est le rôle du code suivante ?",
+        "code": "&#60;meta charset=\\"utf-8\\"&#62;",
+        "lang": "html",
+        "options": ["Définir le type d'encodage du document", "Définir le type du document", "Définir le code de la langue utilisée dans le document", "Définir le type de chiffrement du document"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 30,
+        "question": "Quel attribut HTML spécifie un texte alternatif pour une image, si l'image ne peut pas être affichée ?",
+        "code": "",
+        "lang": "python",
+        "options": ["alt", "src", "title", "class"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 30,
+        "question": "Quel DOCTYPE est correct pour HTML5 ?",
+        "code": "",
+        "lang": "python",
+        "options": ["&#60;!DOCTYPE html&#62;", "&#60;!DOCTYPE HTML5&#62;", "&#60;!DOCTYPE XHTML&#62;", "&#60;!DOCTYPE HTML PUBLIC&#62;"]
+    },
+    {
+        "type": "multi",
+        "points": 2,
+        "temps": 30,
+        "question": "Activer les affirmations correctes :",
+        "code": "",
+        "lang": "python",
+        "options": [["Une page Web n’est autre qu’un fichier texte", true], ["Bloc note permet d'éditer des pages web", true], ["La balise &#60;DOCTYPE html&#62; est optionnelle", false], ["La racine d'une page web est toujour &#60;html&#62;", true]]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 40,
+        "question": "Quelle est l'erreur dans le code suivant :",
+        "code": "&#60;!DOCTYPE html&#62;\\n&#60;html&#62;\\n    &#60;head&#62;\\n        &#60;meta charset=\\"utf-8\\"&#62;\\n        &#60;title&#62;Un titre&#60;/title&#62;\\n    &#60;body&#62;\\n    &#60;/head&#62;\\n    &#60;/body&#62;\\n&#60;/html&#62;",
+        "lang": "html",
+        "options": ["Des balises mal imbriquées", "Le type d'encodage \\"utf-8\\" n'existe pas", "La balise TITLE doit être placée dans la partie BODY", "DOCTYPE en majuscule"]
+    },
+    {
+        "type": "one",
+        "points": 1,
+        "temps": 50,
+        "question": "Quelle est l'erreur dans le code suivant :",
+        "code": "&#60;!DOCTYPE html&#62;\\n&#60;html&#62;\\n    &#60;head&#62;\\n        &#60;meta charset=\\"utf-8\\"&#62;\\n        &#60;title&#62;Un titre&#60;/title&#62;\\n    &#60;body&#62;\\n    &#60;/body&#62;\\n&#60;/html&#62;",
+        "lang": "html",
+        "options": ["Il manque la balise fermante &#60;/head&#62;", "La balise DOCTYPE n'est pas valide", "La balise META est obsolète", "La balise TITLE doit être placée avant la balise META"]
+    },
+    {
+        "type": "multi",
+        "points": 1,
+        "temps": 30,
+        "question": "Les fonctionnalités de base d'un éditeur de texte sont :",
+        "code": "",
+        "lang": "python",
+        "options": [["La coloration syntaxique", true], ["L'auto-indentation", true], ["L'auto-complétion", true], ["La mise en forme du texte", false], ["La traduction automatique du texte", false]]
+    }
+]`;
