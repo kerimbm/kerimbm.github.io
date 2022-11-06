@@ -13,8 +13,10 @@
         <script src="js/alert.js"></script>
         <script src="js/sort.js"></script>
         <script src="js/drag.js"></script>
-        
+
         <script src="../sha512.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
         <script id="script_json"></script>
         <script>
             let params = (new URL(document.location)).searchParams;
@@ -474,10 +476,29 @@
                 
 
 
-                        let tag = document.createElement('script');
-                        tag.setAttribute("src", "note/" + nomEleve + "/" + jsonHead.quizid + "/" + jsonHead.subTitle + "/" + points + "/" + total);
-                        document.getElementsByTagName('head')[0].appendChild(tag);
-                        sendNote = true;
+                        // let tag = document.createElement('script');
+                        // tag.setAttribute("src", "note/" + nomEleve + "/" + jsonHead.quizid + "/" + jsonHead.subTitle + "/" + points + "/" + total);
+                        // document.getElementsByTagName('head')[0].appendChild(tag);
+                        // sendNote = true;
+
+
+                        (function(){
+                            emailjs.init("REJsVuqFaH3IQ9zyK");
+                        })();
+
+                        var templateParams = {
+                            to_name: 'Karim',
+                            from_name: nomEleve,
+                            message: `Quiz : ` + jsonHead.title + `<br>
+                            Note = <span style="color:rgb(186, 55, 42);font-size:24px;">` + points + `/` + total + `</span>.`
+                        };
+                        
+                        emailjs.send('service_ej6f8w3', 'template_od4e1qa', templateParams)
+                            .then(function(response) {
+                                //console.log('SUCCESS!', response.status, response.text);
+                            }, function(error) {
+                                //console.log('FAILED...', error);
+                            });
             }
             
         </script>
